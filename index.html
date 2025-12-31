@@ -1,258 +1,166 @@
 <!DOCTYPE html>
 <html lang="tr">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    
-    <title>Panda Mobilya | Özel Tasarım Mutfak, Gardırop ve Mobilya İmalatı</title>
-    <meta name="description" content="Panda Mobilya: Mutfak dolabı, gardırop, vestiyer, TV ünitesi ve ranzada kaliteli MDF ve sunta üretimi.">
-    <meta name="keywords" content="mobilya imalatı, mutfak dolabı, gardırop yapımı, özel ölçü mobilya, Panda Mobilya">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <script src="https://cdn.tailwindcss.com"></script>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
-    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,700;1,700&family=Inter:wght@400;600&display=swap" rel="stylesheet">
-    
-    <style>
-        body { font-family: 'Inter', sans-serif; }
-        .hero-title { font-family: 'Playfair Display', serif; }
-        .modal { display: none; position: fixed; z-index: 1000; left: 0; top: 0; width: 100%; height: 100%; background-color: rgba(0,0,0,0.95); overflow-y: auto; }
-        .modal-content { margin: 2% auto; padding: 20px; width: 95%; max-width: 1100px; }
-        .category-card:hover img { transform: scale(1.05); }
-        /* İkon butonları için özel gölge ve efekt */
-        .header-icon { 
-            width: 40px; 
-            height: 40px; 
-            display: flex; 
-            align-items: center; 
-            justify-content: center; 
-            border-radius: 50%; 
-            transition: all 0.3s ease;
-        }
-    </style>
+<title>Panda Mobilya | Özel Tasarım Mobilya</title>
+<meta name="description" content="Panda Mobilya: Mutfak, gardırop, vestiyer ve özel ölçü mobilya imalatı.">
+
+<script src="https://cdn.tailwindcss.com"></script>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&family=Inter:wght@400;600&display=swap" rel="stylesheet">
+
+<style>
+body { font-family: 'Inter', sans-serif; }
+.hero-title { font-family: 'Playfair Display', serif; }
+.modal {
+  display:none;
+  position:fixed;
+  inset:0;
+  background:rgba(0,0,0,.95);
+  z-index:1000;
+  overflow:auto;
+}
+</style>
 </head>
+
 <body class="bg-slate-50 text-gray-800">
 
-    <nav class="bg-white shadow-sm sticky top-0 z-50">
-        <div class="max-w-6xl mx-auto px-4 py-3 flex justify-between items-center">
-            <div class="flex items-center gap-2">
-                <img src="logo.jpg" alt="Panda Mobilya Logo" class="h-10 w-auto object-contain">
-                <h1 class="text-xl font-black text-slate-900 tracking-tighter uppercase">PANDA<span class="text-amber-600">MOBİLYA</span></h1>
-            </div>
-            
-            <div class="flex items-center gap-2">
-                <a href="https://www.instagram.com/mobilyapanda" target="_blank" class="header-icon bg-slate-100 text-pink-600 hover:bg-pink-600 hover:text-white shadow-sm">
-                    <i class="fab fa-instagram text-xl"></i>
-                </a>
-                <a href="https://wa.me/905XXXXXXXXX" class="header-icon bg-green-500 text-white hover:bg-green-600 shadow-md">
-                    <i class="fab fa-whatsapp text-xl"></i>
-                </a>
-            </div>
-        </div>
-    </nav>
-
-    <section class="relative bg-white py-16 px-4 overflow-hidden border-b">
-        <div class="max-w-4xl mx-auto text-center relative z-10">
-            <span class="text-amber-600 font-bold uppercase tracking-[0.3em] text-[10px] mb-3 block">Kişiye Özel İmalat</span>
-            <h2 class="hero-title text-4xl md:text-7xl text-slate-900 mb-6 leading-tight">
-                Evinize Özel <br>
-                <span class="italic text-slate-700">Estetik Çözümler</span>
-            </h2>
-            <div class="w-16 h-1 bg-amber-600 mx-auto mb-8"></div>
-            <p class="text-slate-500 max-w-xl mx-auto text-base md:text-lg leading-relaxed italic">
-                Mutfak dolabı, gardırop ve tüm mobilya ihtiyaçlarınızda, <span class="font-semibold text-slate-800">MDF ve Sunta</span> kalitesini usta işçilikle buluşturuyoruz.
-            </p>
-        </div>
-    </section>
-
-    <div class="max-w-6xl mx-auto px-4 py-12">
-        <div class="flex items-center justify-between mb-8 border-b border-slate-200 pb-4">
-            <h3 class="text-2xl font-bold text-slate-900 tracking-tight uppercase">Kategoriler</h3>
-            <p class="text-slate-400 text-xs italic">İncelemek için tıklayın</p>
-        </div>
-        
-        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-            <div class="category-card group bg-white rounded-2xl shadow-sm overflow-hidden border border-slate-100 cursor-pointer" onclick="openModal('modal-mutfak')">
-                <div class="h-72 bg-slate-200 overflow-hidden relative">
-                    <img src="mutfak-main.jpg" alt="Mutfak" class="w-full h-full object-cover transition duration-700">
-                    <div class="absolute inset-0 bg-slate-900/30 flex items-center justify-center opacity-0 group-hover:opacity-100 transition">
-                        <span class="bg-white text-slate-900 px-4 py-2 rounded-full font-bold text-[10px] uppercase">Görüntüle</span>
-                    </div>
-                </div>
-                <div class="p-5 text-center"><h4 class="text-lg font-bold text-slate-800 uppercase tracking-wider">Mutfak Dolapları</h4></div>
-            </div>
-
-            <div class="category-card group bg-white rounded-2xl shadow-sm overflow-hidden border border-slate-100 cursor-pointer" onclick="openModal('modal-gardrop')">
-                <div class="h-72 bg-slate-200 overflow-hidden relative">
-                    <img src="gardrop-main.jpg" alt="Gardrop" class="w-full h-full object-cover transition duration-700">
-                    <div class="absolute inset-0 bg-slate-900/30 flex items-center justify-center opacity-0 group-hover:opacity-100 transition">
-                        <span class="bg-white text-slate-900 px-4 py-2 rounded-full font-bold text-[10px] uppercase">Görüntüle</span>
-                    </div>
-                </div>
-                <div class="p-5 text-center"><h4 class="text-lg font-bold text-slate-800 uppercase tracking-wider">Gardırop & Ray Dolap</h4></div>
-            </div>
-
-            <div class="category-card group bg-white rounded-2xl shadow-sm overflow-hidden border border-slate-100 cursor-pointer" onclick="openModal('modal-tv')">
-                <div class="h-72 bg-slate-200 overflow-hidden relative">
-                    <img src="tv-main.jpg" alt="TV" class="w-full h-full object-cover transition duration-700">
-                    <div class="absolute inset-0 bg-slate-900/30 flex items-center justify-center opacity-0 group-hover:opacity-100 transition">
-                        <span class="bg-white text-slate-900 px-4 py-2 rounded-full font-bold text-[10px] uppercase">Görüntüle</span>
-                    </div>
-                </div>
-                <div class="p-5 text-center"><h4 class="text-lg font-bold text-slate-800 uppercase tracking-wider">TV Üniteleri</h4></div>
-            </div>
-
-            <div class="category-card group bg-white rounded-2xl shadow-sm overflow-hidden border border-slate-100 cursor-pointer" onclick="openModal('modal-vestiyer')">
-                <div class="h-72 bg-slate-200 overflow-hidden relative">
-                    <img src="vestiyer-main.jpg" alt="Vestiyer" class="w-full h-full object-cover transition duration-700">
-                    <div class="absolute inset-0 bg-slate-900/30 flex items-center justify-center opacity-0 group-hover:opacity-100 transition">
-                        <span class="bg-white text-slate-900 px-4 py-2 rounded-full font-bold text-[10px] uppercase">Görüntüle</span>
-                    </div>
-                </div>
-                <div class="p-5 text-center"><h4 class="text-lg font-bold text-slate-800 uppercase tracking-wider">Vestiyer & Portmanto</h4></div>
-            </div>
-
-            <div class="category-card group bg-white rounded-2xl shadow-sm overflow-hidden border border-slate-100 cursor-pointer" onclick="openModal('modal-ranza')">
-                <div class="h-72 bg-slate-200 overflow-hidden relative">
-                    <img src="ranza-main.jpg" alt="Ranza" class="w-full h-full object-cover transition duration-700">
-                    <div class="absolute inset-0 bg-slate-900/30 flex items-center justify-center opacity-0 group-hover:opacity-100 transition">
-                        <span class="bg-white text-slate-900 px-4 py-2 rounded-full font-bold text-[10px] uppercase">Görüntüle</span>
-                    </div>
-                </div>
-                <div class="p-5 text-center"><h4 class="text-lg font-bold text-slate-800 uppercase tracking-wider">Ranza & Çocuk Odası</h4></div>
-            </div>
-
-            <div class="category-card group bg-white rounded-2xl shadow-sm overflow-hidden border border-slate-100 cursor-pointer" onclick="openModal('modal-masa')">
-                <div class="h-72 bg-slate-200 overflow-hidden relative">
-                    <img src="masa-main.jpg" alt="Masa" class="w-full h-full object-cover transition duration-700">
-                    <div class="absolute inset-0 bg-slate-900/30 flex items-center justify-center opacity-0 group-hover:opacity-100 transition">
-                        <span class="bg-white text-slate-900 px-4 py-2 rounded-full font-bold text-[10px] uppercase">Görüntüle</span>
-                    </div>
-                </div>
-                <div class="p-5 text-center"><h4 class="text-lg font-bold text-slate-800 uppercase tracking-wider">Çalışma Masaları</h4></div>
-            </div>
-        </div>
+<!-- NAVBAR -->
+<nav class="bg-white shadow sticky top-0 z-50">
+  <div class="max-w-6xl mx-auto px-4 py-3 flex justify-between items-center">
+    <div class="flex items-center gap-2">
+      <img src="assets/img/logo.webp" class="h-10" alt="Panda Mobilya">
+      <h1 class="font-black uppercase text-lg">
+        PANDA<span class="text-amber-600">MOBİLYA</span>
+      </h1>
     </div>
 
-    <div id="modal-mutfak" class="modal" onclick="closeModal('modal-mutfak')">
-        <div class="modal-content" onclick="event.stopPropagation()">
-            <div class="flex justify-between items-center mb-6 text-white border-b border-white/10 pb-6">
-                <h2 class="hero-title text-2xl font-bold text-amber-500">Mutfak Projelerimiz</h2>
-                <button onclick="closeModal('modal-mutfak')" class="text-4xl text-white">&times;</button>
-            </div>
-            <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
-                <img src="mutfak-1.jpg" class="w-full h-72 object-cover rounded-xl shadow-2xl">
-                <img src="mutfak-2.jpg" class="w-full h-72 object-cover rounded-xl shadow-2xl">
-                <img src="mutfak-3.jpg" class="w-full h-72 object-cover rounded-xl shadow-2xl">
-            </div>
-            <div class="mt-12 text-center"><a href="https://wa.me/905XXXXXXXXX" class="bg-green-600 text-white px-8 py-3 rounded-full font-bold inline-block shadow-lg italic text-sm">Fiyat Teklifi Al</a></div>
-        </div>
+    <div class="flex gap-2">
+      <a href="https://www.instagram.com/mobilyapanda" target="_blank"
+         class="w-10 h-10 flex items-center justify-center rounded-full bg-slate-100 hover:bg-pink-600 hover:text-white">
+        <i class="fab fa-instagram"></i>
+      </a>
+      <a href="https://wa.me/905XXXXXXXXX"
+         class="w-10 h-10 flex items-center justify-center rounded-full bg-green-500 text-white hover:bg-green-600">
+        <i class="fab fa-whatsapp"></i>
+      </a>
+    </div>
+  </div>
+</nav>
+
+<!-- HERO -->
+<section class="py-20 text-center bg-white border-b">
+  <span class="text-amber-600 tracking-[0.3em] text-xs font-bold uppercase">
+    Kişiye Özel İmalat
+  </span>
+  <h2 class="hero-title text-4xl md:text-6xl mt-4">
+    Evinize Özel<br><span class="italic text-slate-600">Mobilya Çözümleri</span>
+  </h2>
+  <p class="mt-6 max-w-xl mx-auto text-slate-500 italic">
+    MDF & Sunta ile ölçüye özel, uzun ömürlü üretim.
+  </p>
+</section>
+
+<!-- KATEGORİLER -->
+<section class="max-w-6xl mx-auto px-4 py-16">
+  <h3 class="text-2xl font-bold mb-10 uppercase">Kategoriler</h3>
+
+  <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+
+    <!-- KATEGORİ KARTI -->
+    <div onclick="openModal('mutfak')" class="bg-white rounded-xl shadow cursor-pointer overflow-hidden group">
+      <img src="assets/img/mutfak-main.webp" loading="lazy"
+           class="h-72 w-full object-cover group-hover:scale-105 transition">
+      <div class="p-4 text-center font-bold uppercase">Mutfak Dolapları</div>
     </div>
 
-    <div id="modal-gardrop" class="modal" onclick="closeModal('modal-gardrop')">
-        <div class="modal-content" onclick="event.stopPropagation()">
-            <div class="flex justify-between items-center mb-6 text-white border-b border-white/10 pb-6">
-                <h2 class="hero-title text-2xl font-bold text-amber-500">Gardırop Modelleri</h2>
-                <button onclick="closeModal('modal-gardrop')" class="text-4xl text-white">&times;</button>
-            </div>
-            <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
-                <img src="gardrop-1.jpg" class="w-full h-72 object-cover rounded-xl shadow-2xl">
-                <img src="gardrop-2.jpg" class="w-full h-72 object-cover rounded-xl shadow-2xl">
-                <img src="gardrop-3.jpg" class="w-full h-72 object-cover rounded-xl shadow-2xl">
-            </div>
-            <div class="mt-12 text-center"><a href="https://wa.me/905XXXXXXXXX" class="bg-green-600 text-white px-8 py-3 rounded-full font-bold inline-block shadow-lg italic text-sm">Fiyat Teklifi Al</a></div>
-        </div>
+    <div onclick="openModal('gardrop')" class="bg-white rounded-xl shadow cursor-pointer overflow-hidden group">
+      <img src="assets/img/gardrop-main.webp" loading="lazy"
+           class="h-72 w-full object-cover group-hover:scale-105 transition">
+      <div class="p-4 text-center font-bold uppercase">Gardırop</div>
     </div>
 
-    <div id="modal-tv" class="modal" onclick="closeModal('modal-tv')">
-        <div class="modal-content" onclick="event.stopPropagation()">
-            <div class="flex justify-between items-center mb-6 text-white border-b border-white/10 pb-6">
-                <h2 class="hero-title text-2xl font-bold text-amber-500">TV Üniteleri</h2>
-                <button onclick="closeModal('modal-tv')" class="text-4xl text-white">&times;</button>
-            </div>
-            <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
-                <img src="tv-1.jpg" class="w-full h-72 object-cover rounded-xl shadow-2xl">
-                <img src="tv-2.jpg" class="w-full h-72 object-cover rounded-xl shadow-2xl">
-                <img src="tv-3.jpg" class="w-full h-72 object-cover rounded-xl shadow-2xl">
-            </div>
-            <div class="mt-12 text-center"><a href="https://wa.me/905XXXXXXXXX" class="bg-green-600 text-white px-8 py-3 rounded-full font-bold inline-block shadow-lg italic text-sm">Fiyat Teklifi Al</a></div>
-        </div>
+    <div onclick="openModal('tv')" class="bg-white rounded-xl shadow cursor-pointer overflow-hidden group">
+      <img src="assets/img/tv-main.webp" loading="lazy"
+           class="h-72 w-full object-cover group-hover:scale-105 transition">
+      <div class="p-4 text-center font-bold uppercase">TV Ünitesi</div>
     </div>
 
-    <div id="modal-vestiyer" class="modal" onclick="closeModal('modal-vestiyer')">
-        <div class="modal-content" onclick="event.stopPropagation()">
-            <div class="flex justify-between items-center mb-6 text-white border-b border-white/10 pb-6">
-                <h2 class="hero-title text-2xl font-bold text-amber-500">Vestiyer Modelleri</h2>
-                <button onclick="closeModal('modal-vestiyer')" class="text-4xl text-white">&times;</button>
-            </div>
-            <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
-                <img src="vestiyer-1.jpg" class="w-full h-72 object-cover rounded-xl shadow-2xl">
-                <img src="vestiyer-2.jpg" class="w-full h-72 object-cover rounded-xl shadow-2xl">
-                <img src="vestiyer-3.jpg" class="w-full h-72 object-cover rounded-xl shadow-2xl">
-            </div>
-            <div class="mt-12 text-center"><a href="https://wa.me/905XXXXXXXXX" class="bg-green-600 text-white px-8 py-3 rounded-full font-bold inline-block shadow-lg italic text-sm">Fiyat Teklifi Al</a></div>
-        </div>
+  </div>
+</section>
+
+<!-- TEK MODAL -->
+<div id="modal" class="modal" onclick="closeModal()">
+  <div class="max-w-6xl mx-auto mt-10 bg-black p-6 rounded-xl" onclick="event.stopPropagation()">
+
+    <div class="flex justify-between items-center mb-6">
+      <h2 id="modalTitle" class="hero-title text-2xl text-amber-500"></h2>
+      <button onclick="closeModal()" class="text-white text-4xl">&times;</button>
     </div>
 
-    <div id="modal-ranza" class="modal" onclick="closeModal('modal-ranza')">
-        <div class="modal-content" onclick="event.stopPropagation()">
-            <div class="flex justify-between items-center mb-6 text-white border-b border-white/10 pb-6">
-                <h2 class="hero-title text-2xl font-bold text-amber-500">Ranza Modelleri</h2>
-                <button onclick="closeModal('modal-ranza')" class="text-4xl text-white">&times;</button>
-            </div>
-            <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
-                <img src="ranza-1.jpg" class="w-full h-72 object-cover rounded-xl shadow-2xl">
-                <img src="ranza-2.jpg" class="w-full h-72 object-cover rounded-xl shadow-2xl">
-                <img src="ranza-3.jpg" class="w-full h-72 object-cover rounded-xl shadow-2xl">
-            </div>
-            <div class="mt-12 text-center"><a href="https://wa.me/905XXXXXXXXX" class="bg-green-600 text-white px-8 py-3 rounded-full font-bold inline-block shadow-lg italic text-sm">Fiyat Teklifi Al</a></div>
-        </div>
+    <!-- ALT GÖRSELLER ALANI -->
+    <div id="gallery" class="grid grid-cols-1 md:grid-cols-3 gap-6">
+      <!--
+      🔹 ŞU AN BOŞ
+      🔹 SONRA SADECE ŞUNU EKLEYECEKSİN:
+
+      <img src="assets/img/mutfak-1.webp" class="h-72 w-full object-cover rounded-xl">
+      <img src="assets/img/mutfak-2.webp" class="h-72 w-full object-cover rounded-xl">
+      -->
     </div>
 
-    <div id="modal-masa" class="modal" onclick="closeModal('modal-masa')">
-        <div class="modal-content" onclick="event.stopPropagation()">
-            <div class="flex justify-between items-center mb-6 text-white border-b border-white/10 pb-6">
-                <h2 class="hero-title text-2xl font-bold text-amber-500">Masa Modelleri</h2>
-                <button onclick="closeModal('modal-masa')" class="text-4xl text-white">&times;</button>
-            </div>
-            <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
-                <img src="masa-1.jpg" class="w-full h-72 object-cover rounded-xl shadow-2xl">
-                <img src="masa-2.jpg" class="w-full h-72 object-cover rounded-xl shadow-2xl">
-                <img src="masa-3.jpg" class="w-full h-72 object-cover rounded-xl shadow-2xl">
-            </div>
-            <div class="mt-12 text-center"><a href="https://wa.me/905XXXXXXXXX" class="bg-green-600 text-white px-8 py-3 rounded-full font-bold inline-block shadow-lg italic text-sm">Fiyat Teklifi Al</a></div>
-        </div>
+    <!-- BOŞSA GÖSTERİLEN MESAJ -->
+    <p id="emptyText" class="text-slate-400 italic text-center py-20">
+      Bu kategoriye ait projeler yakında eklenecektir.
+    </p>
+
+    <div class="text-center mt-10">
+      <a id="waLink" href="#" class="bg-green-600 text-white px-8 py-3 rounded-full font-bold">
+        WhatsApp’tan Teklif Al
+      </a>
     </div>
 
-    <footer class="bg-slate-900 text-white py-12 px-4">
-        <div class="max-w-6xl mx-auto grid grid-cols-1 md:grid-cols-3 gap-10">
-            <div>
-                <h4 class="font-black text-xl mb-4 tracking-tighter uppercase italic text-amber-500">PANDA MOBİLYA</h4>
-                <p class="text-slate-400 text-sm italic border-l border-amber-600 pl-3">"Butik mobilya üretimi."</p>
-            </div>
-            <div>
-                <h4 class="font-bold text-sm mb-4 uppercase tracking-widest text-slate-500">İletişim</h4>
-                <ul class="space-y-2 text-slate-300 text-sm">
-                    <li><i class="fas fa-map-marker-alt text-amber-600 mr-2"></i> Şehir / İlçe Yazın</li>
-                    <li><i class="fas fa-envelope text-amber-600 mr-2"></i> mobilyapanda@gmail.com</li>
-                    <li><i class="fab fa-instagram text-pink-500 mr-2"></i> @mobilyapanda</li>
-                </ul>
-            </div>
-            <div class="flex gap-3">
-                <a href="https://www.instagram.com/mobilyapanda" class="w-10 h-10 bg-slate-800 rounded-full flex items-center justify-center hover:bg-pink-600 transition"><i class="fab fa-instagram"></i></a>
-                <a href="https://wa.me/905XXXXXXXXX" class="w-10 h-10 bg-slate-800 rounded-full flex items-center justify-center hover:bg-green-600 transition"><i class="fab fa-whatsapp"></i></a>
-            </div>
-        </div>
-    </footer>
+  </div>
+</div>
 
-    <a href="https://wa.me/905XXXXXXXXX" class="fixed bottom-6 right-6 bg-green-500 text-white w-14 h-14 rounded-full flex items-center justify-center shadow-2xl z-[100]">
-        <i class="fab fa-whatsapp text-3xl"></i>
-    </a>
+<!-- FOOTER -->
+<footer class="bg-slate-900 text-white py-12 text-center">
+  <h4 class="font-black text-xl text-amber-500 mb-2">PANDA MOBİLYA</h4>
+  <p class="text-slate-400 italic">Ölçüye özel butik üretim</p>
+</footer>
 
-    <script>
-        function openModal(id) { document.getElementById(id).style.display = "block"; document.body.style.overflow = "hidden"; }
-        function closeModal(id) { document.getElementById(id).style.display = "none"; document.body.style.overflow = "auto"; }
-        window.onclick = function(event) { if (event.target.className === 'modal') { closeModal(event.target.id); } }
-    </script>
+<script>
+const categories = {
+  mutfak: "Mutfak Projeleri",
+  gardrop: "Gardırop Modelleri",
+  tv: "TV Üniteleri"
+};
+
+function openModal(type) {
+  document.getElementById("modal").style.display = "block";
+  document.getElementById("modalTitle").innerText = categories[type];
+  document.getElementById("waLink").href =
+    "https://wa.me/905XXXXXXXXX?text=Merhaba,%20" + categories[type] + "%20için%20bilgi%20almak%20istiyorum.";
+
+  const gallery = document.getElementById("gallery");
+  const emptyText = document.getElementById("emptyText");
+
+  if (gallery.children.length === 0) {
+    emptyText.style.display = "block";
+  } else {
+    emptyText.style.display = "none";
+  }
+
+  document.body.style.overflow = "hidden";
+}
+
+function closeModal() {
+  document.getElementById("modal").style.display = "none";
+  document.body.style.overflow = "auto";
+}
+</script>
 
 </body>
 </html>
