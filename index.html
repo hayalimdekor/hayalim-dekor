@@ -20,15 +20,13 @@
         .header-icon { width: 42px; height: 42px; display: flex; align-items: center; justify-content: center; border-radius: 50%; border: 1px solid #e2e8f0; }
         .square-video-container { width: 100%; max-width: 600px; margin: 0 auto; aspect-ratio: 1 / 1; border-radius: 2.5rem; overflow: hidden; box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.15); border: 8px solid white; background-color: #000; }
         .vertical-video { aspect-ratio: 9/16; width: 100%; object-fit: cover; border-radius: 1.5rem; border: 4px solid #334155; }
-        .map-container { width: 100%; height: 500px; border-radius: 2.5rem; overflow: hidden; box-shadow: 0 20px 25px -5px rgb(0 0 0 / 0.1); border: 8px solid white; }
+        .map-container { width: 100%; height: 500px; border-radius: 2.5rem; overflow: hidden; border: 8px solid white; box-shadow: 0 20px 25px -5px rgb(0 0 0 / 0.1); }
         
-        /* Blog Sayfası ve Akordeon */
+        /* Blog Akordeon */
         #blogSection { display: none; min-height: 100vh; background: #faf9f6; }
-        .blog-item { background: white; border-radius: 1.5rem; border: 1px solid #f1f5f9; margin-bottom: 1rem; overflow: hidden; transition: all 0.3s ease; }
+        .blog-item { background: white; border-radius: 1.5rem; border: 1px solid #f1f5f9; margin-bottom: 1rem; overflow: hidden; }
         .blog-header { width: 100%; padding: 1.5rem 2rem; display: flex; justify-content: space-between; align-items: center; cursor: pointer; text-align: left; }
-        .blog-body { max-height: 0; overflow: hidden; transition: max-height 0.4s ease-out; background: #fff; }
-        .blog-body-inner { padding: 0 2rem 2rem 2rem; color: #475569; line-height: 1.8; }
-        .blog-item.active { box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1); border-color: #D4AF37; }
+        .blog-body { max-height: 0; overflow: hidden; transition: max-height 0.4s ease-out; }
         .blog-item.active .blog-body { max-height: 1000px; }
         .blog-item.active i { transform: rotate(180deg); color: #D4AF37; }
     </style>
@@ -43,9 +41,7 @@
             </div>
             <div class="flex items-center gap-6">
                 <button onclick="showBlog()" class="font-bold text-xs uppercase tracking-widest hover:text-gold transition">Blog</button>
-                <div class="flex items-center gap-2">
-                    <a href="https://wa.me/905466309919" class="header-icon bg-green-500 text-white hover:bg-green-600 shadow-md transition"><i class="fab fa-whatsapp text-xl"></i></a>
-                </div>
+                <a href="https://wa.me/905466309919" class="header-icon bg-green-500 text-white shadow-md transition hover:scale-110"><i class="fab fa-whatsapp text-xl"></i></a>
             </div>
         </div>
     </nav>
@@ -65,7 +61,7 @@
             </div>
         </section>
 
-        <section class="max-w-5xl mx-auto px-6 py-20 border-t border-slate-100">
+        <section class="max-w-5xl mx-auto px-6 py-20 border-t border-slate-100 text-center md:text-left">
             <div class="grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
                 <img src="hakkimizda.jpg" alt="Atölye" class="rounded-[2.5rem] shadow-2xl border-4 border-white object-cover h-[400px] w-full">
                 <div class="space-y-6">
@@ -78,9 +74,9 @@
         <div class="max-w-7xl mx-auto px-4 py-16 bg-white/50 rounded-[4rem] mb-20 shadow-inner">
             <div class="text-center mb-16 px-4">
                 <h3 class="serif text-4xl font-bold mb-4 uppercase text-slate-800">Koleksiyonlarımız</h3>
-                <p class="text-slate-400 italic text-sm tracking-widest uppercase italic">İncelemek için kategorilere tıklayın</p>
+                <p class="text-slate-400 italic text-sm tracking-widest uppercase">İncelemek İçin Kategori Seçin</p>
             </div>
-            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-10" id="catGrid">
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-10 px-4" id="catGrid">
                 </div>
         </div>
 
@@ -88,23 +84,23 @@
             <div class="grid grid-cols-1 lg:grid-cols-3 gap-12">
                 <div class="space-y-8">
                     <div class="bg-slate-50 p-8 rounded-[2rem] border border-slate-100">
-                        <h5 class="font-bold uppercase text-[10px] text-gold tracking-widest mb-4">Adres</h5>
-                        <p class="text-slate-700 italic uppercase">Ekinyolu Yeni Sanayi Sitesi, 3. Kısım No:123/5C, Bingöl/Merkez</p>
-                        <p class="text-slate-800 font-bold text-xl mt-4 italic uppercase">0546 630 99 19</p>
+                        <h5 class="font-bold uppercase text-[10px] text-gold tracking-widest mb-4 uppercase">İletişim</h5>
+                        <p class="text-slate-700 font-medium italic uppercase text-sm mb-4">Ekinyolu Yeni Sanayi Sitesi, 3. Kısım No:123/5C, Bingöl/Merkez</p>
+                        <p class="text-slate-800 font-bold text-xl uppercase tracking-tighter">0546 630 99 19</p>
                     </div>
-                    <a href="https://maps.app.goo.gl/ChIJT-9v7_jPc0AR-6xfLPSUS_44" target="_blank" class="bg-gold text-white block text-center py-5 rounded-2xl font-bold uppercase text-xs tracking-widest shadow-xl">Yol Tarifi Al</a>
+                    <a href="https://www.google.com/maps/dir//HAYAL%C4%B0M+Grup+mobilya+ve+dizayn+Ekinyolu+Merkez%2F%C3%9C%C3%A7%C3%BCnc%C3%BC+K%C4%B1s%C4%B1m+No:123%2F5C+12000+Merkez%2FBing%C3%B6l" target="_blank" class="bg-gold text-white block text-center py-5 rounded-2xl font-bold uppercase text-xs tracking-widest shadow-xl">Yol Tarifi Al</a>
                 </div>
                 <div class="lg:col-span-2">
                     <div class="map-container">
-                        <iframe src="https://maps.app.goo.gl/ChIJT-9v7_jPc0AR-6xfLPSUS_45" width="100%" height="100%" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+                        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3113.8821422791883!2d40.55930597551061!3d38.89506467172403!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4070cf38eff6ef4f%3A0xfe4b94f42c5facfb!2sHAYAL%C4%B0M%20Grup%20mobilya%20ve%20dizayn!5e0!3m2!1str!2str!4v1709400000000!5m2!1str!2str" width="100%" height="100%" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
                     </div>
                 </div>
             </div>
         </section>
 
-        <footer class="bg-slate-900 text-white py-12 text-center">
-            <p class="serif text-xl font-bold gold-accent uppercase italic">HAYALİM DEKOR</p>
-            <p class="text-[9px] tracking-widest text-slate-500 mt-4 italic uppercase">© 2026 Bingöl / Türkiye</p>
+        <footer class="bg-slate-900 text-white py-12 text-center uppercase tracking-widest text-[10px]">
+            <p class="serif text-xl font-bold gold-accent mb-2 uppercase italic">HAYALİM DEKOR</p>
+            <p>© 2026 Bingöl / Türkiye</p>
         </footer>
     </main>
 
@@ -115,89 +111,12 @@
             
             <img src="simulator-base.png" alt="Rehber" class="w-full h-80 object-cover rounded-[3rem] shadow-2xl mb-12">
 
-            <div id="blogAccordion">
-                <div class="blog-item">
-                    <div class="blog-header" onclick="toggleAccordion(this)">
-                        <h4 class="font-bold uppercase text-lg tracking-tight">1. MDF mi Sunta mı? Mobilya Seçiminde Bilmeniz Gerekenler</h4>
-                        <i class="fas fa-chevron-down transition"></i>
-                    </div>
-                    <div class="blog-body">
-                        <div class="blog-body-inner">
-                            <p class="mb-4 font-semibold italic uppercase">Mobilya satın alırken karşınıza çıkan en büyük ikilem MDF ve sunta arasındaki farklar olur. Peki, hangisi daha kaliteli?</p>
-                            <ul class="space-y-4 italic uppercase text-sm">
-                                <li><strong>MDF (Medium Density Fiberboard):</strong> Odun liflerinin yüksek basınçla sıkıştırılmasıyla oluşur. Yoğun yapısı sayesinde vida tutma gücü yüksektir ve suya karşı suntaya oranla daha dirençlidir.</li>
-                                <li><strong>Sunta (Yonga Levha):</strong> Odun talaşlarının preslenmesiyle elde edilir. Daha ekonomik ve hafif bir malzemedir. Özellikle gardırop gövdeleri ve kitaplıklar için maliyet odaklı mükemmel bir çözümdür.</li>
-                            </ul>
-                            <p class="mt-4 border-t pt-4 font-bold text-slate-800 italic uppercase text-sm">Sonuç: Eğer uzun ömürlü ve neme dayanıklı bir mutfak veya banyo dolabı arıyorsanız MDF mobilya; uygun fiyatlı ve fonksiyonel çözümler arıyorsanız Sunta Lam ürünlerimizi tercih edebilirsiniz.</p>
-                        </div>
-                    </div>
+            <div id="blogAccordion" class="space-y-4">
                 </div>
-
-                <div class="blog-item">
-                    <div class="blog-header" onclick="toggleAccordion(this)">
-                        <h4 class="font-bold uppercase text-lg tracking-tight">2. MDF Lam ve Sunta Lam Mobilya Temizliği Nasıl Yapılır?</h4>
-                        <i class="fas fa-chevron-down transition"></i>
-                    </div>
-                    <div class="blog-body">
-                        <div class="blog-body-inner">
-                            <p class="mb-4 italic uppercase text-sm">Yeni mobilyalarınızın ilk günkü parlaklığını korumasını istiyorsanız, doğru temizlik yöntemlerini uygulamalısınız.</p>
-                            <ul class="space-y-3 italic uppercase text-sm">
-                                <li><strong>Kurulama Şart:</strong> Mobilyanızı hafif nemli bir bezle sildikten sonra mutlaka kuru bir bezle üzerinden geçin. Kenar bantlarında su birikmesi malzemenin şişmesine neden olabilir.</li>
-                                <li><strong>Kimyasallardan Kaçının:</strong> Çamaşır suyu veya aşındırıcı toz deterjanlar yerine sıvı sabun veya özel ahşap temizleyiciler kullanın.</li>
-                                <li><strong>Çizilmelere Karşı Önlem:</strong> Toz alırken mikrofiber bez kullanarak yüzeyde oluşabilecek mikro çizikleri engelleyebilirsiniz.</li>
-                            </ul>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="blog-item">
-                    <div class="blog-header" onclick="toggleAccordion(this)">
-                        <h4 class="font-bold uppercase text-lg tracking-tight">3. Küçük Evler İçin Dekorasyon Fikirleri</h4>
-                        <i class="fas fa-chevron-down transition"></i>
-                    </div>
-                    <div class="blog-body">
-                        <div class="blog-body-inner">
-                            <ul class="space-y-3 italic uppercase text-sm">
-                                <li><strong>Açık Renklerin Gücü:</strong> Beyaz, krem ve açık meşe tonlarındaki MDF kaplamalar ışığı yansıtarak odanızı olduğundan büyük gösterir.</li>
-                                <li><strong>Çok Amaçlı Modüller:</strong> Hem kitaplık hem de bölme duvar görevi gören ünitelerle alan tasarrufu sağlayın.</li>
-                                <li><strong>Minimalist Tasarımlar:</strong> İnce hatlı ve yüksek ayaklı mobilyalar, zemin alanını daha görünür kılarak ferahlık hissi yaratır.</li>
-                            </ul>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="blog-item">
-                    <div class="blog-header" onclick="toggleAccordion(this)">
-                        <h4 class="font-bold uppercase text-lg tracking-tight">4. Ofis Dekorasyonunda Ahşap ve Metal Uyumu</h4>
-                        <i class="fas fa-chevron-down transition"></i>
-                    </div>
-                    <div class="blog-body">
-                        <div class="blog-body-inner">
-                            <ul class="space-y-3 italic uppercase text-sm">
-                                <li><strong>Ergonomi:</strong> Uzun çalışma saatleri için tasarlanan ergonomik masalarımızda, darbelere dayanıklı Sunta Lam yüzeyler kullanarak dayanıklılığı artırıyoruz.</li>
-                                <li><strong>Renk Paleti:</strong> Ofislerde odaklanmayı artıran antrasit, gri ve ceviz dokulu kaplamalar bu yılın favorisi. Mat yüzeyli MDF panelleri tercih edebilirsiniz.</li>
-                            </ul>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="blog-item">
-                    <div class="blog-header" onclick="toggleAccordion(this)">
-                        <h4 class="font-bold uppercase text-lg tracking-tight">5. Sağlığınız İçin E1 Standartlı Mobilya Tercih Edin</h4>
-                        <i class="fas fa-chevron-down transition"></i>
-                    </div>
-                    <div class="blog-body">
-                        <div class="blog-body-inner">
-                            <p class="mb-4 italic uppercase text-sm">Evinize aldığınız mobilyanın sadece şık olması yetmez, sağlığınızı da korumalıdır.</p>
-                            <p class="bg-slate-50 p-4 rounded-xl italic uppercase text-xs">Bu belge, mobilya yapımında kullanılan yapıştırıcılardaki formaldehit salınımının dünya standartlarının altında olduğunu kanıtlar. Bebek ve çocuk odalarında mutlaka E1 belgeli ürünleri sorgulamalısınız.</p>
-                        </div>
-                    </div>
-                </div>
-            </div>
         </section>
     </div>
 
-    <a href="https://wa.me/905466309919" class="fixed bottom-6 right-6 bg-green-500 text-white w-16 h-16 rounded-2xl flex items-center justify-center shadow-2xl z-[100] animate-bounce"><i class="fab fa-whatsapp text-4xl"></i></a>
+    <a href="https://wa.me/905466309919" class="fixed bottom-6 right-6 bg-green-500 text-white w-16 h-16 rounded-2xl flex items-center justify-center shadow-2xl z-[100] animate-bounce hover:scale-110 transition"><i class="fab fa-whatsapp text-4xl"></i></a>
 
     <script>
         const categories = [
@@ -209,10 +128,32 @@
             {id: 'masa', name: 'Çalışma Masaları'}
         ];
 
+        const blogData = [
+            {
+                title: "1. MDF mi Sunta mı? Mobilya Seçiminde Bilmeniz Gerekenler",
+                content: "MDF (Medium Density Fiberboard): Odun liflerinin yüksek basınçla sıkıştırılmasıyla oluşur. Yoğun yapısı sayesinde vida tutma gücü yüksektir ve suya karşı suntaya oranla daha dirençlidir.<br><br>Sunta (Yonga Levha): Odun talaşlarının preslenmesiyle elde edilir. Daha ekonomik ve hafif bir malzemedir.<br><br><strong>Sonuç:</strong> Uzun ömürlü bir mutfak arıyorsanız MDF; uygun fiyatlı çözümler için Sunta tercih edebilirsiniz."
+            },
+            {
+                title: "2. Mobilya Temizliği Nasıl Yapılır?",
+                content: "Kurulama Şart: Hafif nemli bezle sildikten sonra mutlaka kuru bezle üzerinden geçin. Kenar bantlarında su birikmesi şişmeye neden olur.<br><br>Kimyasallardan Kaçının: Çamaşır suyu yerine sıvı sabun kullanın.<br><br>Çizilmelere Karşı: Mikrofiber bez kullanarak mikro çizikleri engelleyin."
+            },
+            {
+                title: "3. Küçük Evler İçin Dekorasyon Fikirleri",
+                content: "Açık Renklerin Gücü: Beyaz ve krem tonlar ışığı yansıtarak odayı geniş gösterir.<br><br>Çok Amaçlı Modüller: Hem kitaplık hem bölme duvar görevi gören ünitelerle alan tasarrufu sağlayın.<br><br>Minimalist Tasarımlar: İnce hatlı mobilyalar ferahlık hissi yaratır."
+            },
+            {
+                title: "4. Modern Ofis Dekorasyonu",
+                content: "Ergonomi: Uzun çalışma saatleri için ergonomik masalar seçin. Sunta Lam yüzeyler dayanıklılık için idealdir.<br><br>Renk Paleti: Antrasit ve gri tonları odaklanmayı artırır. Mat yüzeyli MDF panelleri tercih edebilirsiniz."
+            },
+            {
+                title: "5. Sağlığınız İçin E1 Standartlı Mobilya",
+                content: "E1 belgesi, mobilyadaki formaldehit salınımının dünya standartlarının altında olduğunu kanıtlar. Özellikle çocuk odası mobilyası alırken sağlığınız için mutlaka E1 belgeli ürünleri sorgulamalısınız. Üretimde insan sağlığını en ön sıraya koyuyoruz."
+            }
+        ];
+
         // Kategorileri ve Modalları Oluştur
         const grid = document.getElementById('catGrid');
         categories.forEach(cat => {
-            // Ana Sayfa Kartları
             grid.innerHTML += `
                 <div class="category-card group" onclick="openModal('modal-${cat.id}')">
                     <div class="h-80 overflow-hidden relative">
@@ -223,10 +164,9 @@
                 </div>
             `;
             
-            // Modal İçerikleri
             let imgs = '';
             for(let i=1; i<=9; i++) { imgs += `<img src="${cat.id}-${i}.webp" class="w-full h-72 object-cover rounded-3xl border-2 border-white shadow-lg">`; }
-            const modalHtml = `
+            document.body.insertAdjacentHTML('beforeend', `
                 <div id="modal-${cat.id}" class="modal" onclick="closeModal('modal-${cat.id}')">
                     <div class="modal-content" onclick="event.stopPropagation()">
                         <div class="flex justify-between items-center mb-8 border-b border-white/10 pb-6 text-white uppercase">
@@ -236,15 +176,14 @@
                         <div class="grid grid-cols-1 md:grid-cols-3 gap-6">${imgs}</div>
                     </div>
                 </div>
-            `;
-            document.body.insertAdjacentHTML('beforeend', modalHtml);
+            `);
         });
 
-        // Video Galerisi Kutusu ve Modalı
+        // Video Galerisi
         grid.innerHTML += `
             <div class="category-card bg-slate-900 text-white flex flex-col justify-center items-center" onclick="openModal('modal-videolar')">
                 <div class="h-80 flex items-center justify-center"><i class="fas fa-play text-5xl gold-accent"></i></div>
-                <div class="p-6 uppercase font-bold gold-accent">ÜRETİM VİDEOLARI</div>
+                <div class="p-6 uppercase font-bold gold-accent uppercase">ÜRETİM VİDEOLARI</div>
             </div>
         `;
         let vids = '';
@@ -252,8 +191,8 @@
         document.body.insertAdjacentHTML('beforeend', `
             <div id="modal-videolar" class="modal" onclick="closeModal('modal-videolar')">
                 <div class="modal-content" onclick="event.stopPropagation()">
-                    <div class="flex justify-between items-center mb-8 border-b border-white/10 pb-6 text-white text-center uppercase">
-                        <h2 class="serif text-3xl font-bold gold-accent uppercase">VİDEOLARIMIZ</h2>
+                    <div class="flex justify-between items-center mb-8 border-b border-white/10 pb-6 text-white text-center uppercase font-bold">
+                        <h2 class="serif text-3xl gold-accent">VİDEOLAR</h2>
                         <button onclick="closeModal('modal-videolar')" class="text-5xl">×</button>
                     </div>
                     <div class="grid grid-cols-2 md:grid-cols-3 gap-6">${vids}</div>
@@ -261,27 +200,34 @@
             </div>
         `);
 
-        // Blog Akordeon Kontrolü
+        // Blog İçeriği Oluştur
+        const blogContainer = document.getElementById('blogAccordion');
+        blogData.forEach((blog, index) => {
+            blogContainer.innerHTML += `
+                <div class="blog-item">
+                    <div class="blog-header" onclick="toggleAccordion(this)">
+                        <h4 class="font-bold uppercase text-lg tracking-tight italic uppercase">${blog.title}</h4>
+                        <i class="fas fa-chevron-down transition"></i>
+                    </div>
+                    <div class="blog-body">
+                        <div class="p-8 text-slate-600 leading-relaxed italic uppercase text-sm border-t border-slate-50">${blog.content}</div>
+                    </div>
+                </div>
+            `;
+        });
+
         function toggleAccordion(element) {
             const item = element.parentElement;
             const isActive = item.classList.contains('active');
-            
-            // Diğerlerini kapat
             document.querySelectorAll('.blog-item').forEach(i => i.classList.remove('active'));
-            
-            if (!isActive) {
-                item.classList.add('active');
-            }
+            if (!isActive) item.classList.add('active');
         }
 
-        // Sayfa Değiştirme
         function showBlog() { document.getElementById('mainSection').style.display = 'none'; document.getElementById('blogSection').style.display = 'block'; window.scrollTo(0,0); }
         function showMain() { document.getElementById('blogSection').style.display = 'none'; document.getElementById('mainSection').style.display = 'block'; window.scrollTo(0,0); }
-        
-        // Modal Aç/Kapat
         function openModal(id) { document.getElementById(id).style.display = "block"; document.body.style.overflow = "hidden"; }
         function closeModal(id) { document.getElementById(id).style.display = "none"; document.body.style.overflow = "auto"; }
-        window.onclick = function(event) { if (event.target.classList.contains('modal')) { closeModal(event.target.id); } }
+        window.onclick = function(event) { if (event.target.classList.contains('modal')) closeModal(event.target.id); }
     </script>
 </body>
 </html>
