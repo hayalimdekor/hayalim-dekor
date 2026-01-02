@@ -9,21 +9,17 @@
     <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=Inter:wght@300;400;600&display=swap" rel="stylesheet">
     
     <style>
-        body { font-family: 'Inter', sans-serif; background-color: #faf9f6; } /* Fildişi Arkaplan */
+        body { font-family: 'Inter', sans-serif; background-color: #faf9f6; } 
         .serif { font-family: 'Playfair Display', serif; }
-        .gold-accent { color: #D4AF37; } /* Altın Vurgu */
+        .gold-accent { color: #D4AF37; } 
         .bg-gold { background-color: #D4AF37; }
-        .border-gold { border-color: #D4AF37; }
-        
         .modal { display: none; position: fixed; z-index: 1000; left: 0; top: 0; width: 100%; height: 100%; background-color: rgba(15, 23, 42, 0.98); overflow-y: auto; }
         .modal-content { margin: 1% auto; padding: 20px; width: 95%; max-width: 1200px; }
-        
-        .category-card { transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1); }
-        .category-card:hover { transform: translateY(-10px); }
+        .category-card { transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1); border-radius: 2rem; overflow: hidden; background: white; border: 1px solid #f1f5f9; }
+        .category-card:hover { transform: translateY(-10px); box-shadow: 0 20px 25px -5px rgb(0 0 0 / 0.1); }
         .category-card img { transition: transform 0.6s ease; }
         .category-card:hover img { transform: scale(1.1); }
-
-        .header-icon { width: 42px; height: 42px; display: flex; align-items: center; justify-content: center; border-radius: 50%; transition: all 0.3s ease; border: 1px solid #e2e8f0; }
+        .header-icon { width: 42px; height: 42px; display: flex; align-items: center; justify-content: center; border-radius: 50%; border: 1px solid #e2e8f0; }
     </style>
 </head>
 <body class="text-slate-900">
@@ -32,44 +28,35 @@
         <div class="max-w-6xl mx-auto px-4 py-3 flex justify-between items-center">
             <div class="flex items-center gap-3">
                 <img src="logo.jpg" alt="Hayalim Dekor" class="h-11 w-auto">
-                <h1 class="text-2xl font-bold tracking-tight italic">HAYALİM<span class="gold-accent">DEKOR</span></h1>
+                <h1 class="text-2xl font-bold tracking-tight italic uppercase text-slate-800">HAYALİM<span class="gold-accent text-slate-900">DEKOR</span></h1>
             </div>
-            <div class="flex items-center gap-3">
-                <a href="https://www.instagram.com/hayalimdekor12" target="_blank" class="header-icon text-pink-500 hover:bg-pink-500 hover:text-white shadow-sm"><i class="fab fa-instagram"></i></a>
-                <a href="https://wa.me/905466309919" class="header-icon bg-green-500 text-white hover:bg-green-600 shadow-md"><i class="fab fa-whatsapp text-xl"></i></a>
+            <div class="flex items-center gap-2">
+                <a href="https://www.instagram.com/hayalimdekor12" target="_blank" class="header-icon text-pink-500 hover:bg-pink-500 hover:text-white transition"><i class="fab fa-instagram"></i></a>
+                <a href="https://wa.me/905466309919" class="header-icon bg-green-500 text-white hover:bg-green-600 transition"><i class="fab fa-whatsapp text-xl"></i></a>
             </div>
         </div>
     </nav>
 
-    <section class="bg-white py-24 px-4 relative overflow-hidden">
-        <div class="max-w-4xl mx-auto text-center relative z-10">
-            <p class="gold-accent font-semibold tracking-[0.4em] text-xs mb-4 uppercase">Bingöl Özel Üretim Atölyesi</p>
-            <h2 class="serif text-5xl md:text-8xl text-slate-800 mb-8 leading-tight">Zarafeti <span class="italic font-normal">Hayal Edin</span></h2>
-            <div class="w-20 h-0.5 bg-gold mx-auto mb-8"></div>
-            <p class="text-slate-500 max-w-2xl mx-auto text-lg md:text-xl font-light leading-relaxed italic">
-                Mutfaktan yatak odasına, her detayda <span class="font-semibold text-slate-800 underline decoration-gold">Hayalim Dekor</span> imzası.
-            </p>
-        </div>
-        <div class="absolute -bottom-24 -left-24 w-96 h-96 bg-slate-50 rounded-full blur-3xl opacity-60"></div>
+    <section class="bg-white py-20 px-4 text-center border-b border-slate-50">
+        <p class="gold-accent font-semibold tracking-[0.4em] text-[10px] mb-4 uppercase">Bingöl Özel Üretim Atölyesi</p>
+        <h2 class="serif text-5xl md:text-7xl text-slate-800 mb-6 leading-tight">Evinize Özel <br> <span class="italic font-normal">Estetik Çözümler</span></h2>
+        <div class="w-20 h-0.5 bg-gold mx-auto mb-8"></div>
+        <p class="text-slate-500 max-w-2xl mx-auto text-lg italic">Atölyemizden çıkan her parça, sizin hayalinizdir.</p>
     </section>
 
-    <section class="max-w-5xl mx-auto px-4 py-16">
-        <div class="rounded-[2.5rem] overflow-hidden shadow-2xl border-[12px] border-white relative group">
+    <section class="max-w-5xl mx-auto px-4 py-12">
+        <div class="rounded-[2.5rem] overflow-hidden shadow-2xl border-8 border-white">
             <video class="w-full aspect-video object-cover" controls poster="video-kapak.jpg">
-                <source src="video.mp4" type="video/mp4">
+                <source src="video-ana.mp4" type="video/mp4">
             </video>
         </div>
     </section>
 
-    <div class="max-w-7xl mx-auto px-4 py-20">
-        <div class="text-center mb-16">
-            <h3 class="serif text-4xl font-bold mb-4">Üretim Koleksiyonumuz</h3>
-            <p class="text-slate-400 italic">Tasarımlarımızı keşfetmek için kategorileri seçin</p>
-        </div>
-        
-        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-12">
+    <div class="max-w-7xl mx-auto px-4 py-16">
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-10">
+            
             <script>
-                const cats = [
+                const categories = [
                     {id: 'mutfak', name: 'Mutfak Dolapları'},
                     {id: 'gardrop', name: 'Gardırop & Ray Dolap'},
                     {id: 'tv', name: 'TV Üniteleri'},
@@ -77,84 +64,106 @@
                     {id: 'ranza', name: 'Ranza & Çocuk Odası'},
                     {id: 'masa', name: 'Çalışma Masaları'}
                 ];
-                
-                cats.forEach(cat => {
+
+                categories.forEach(cat => {
                     document.write(`
-                        <div class="category-card group bg-white rounded-[2rem] shadow-xl shadow-slate-200/50 overflow-hidden cursor-pointer border border-slate-50" onclick="openModal('modal-${cat.id}')">
+                        <div class="category-card group cursor-pointer" onclick="openModal('modal-${cat.id}')">
                             <div class="h-80 overflow-hidden relative">
                                 <img src="${cat.id}-main.jpg" class="w-full h-full object-cover">
-                                <div class="absolute inset-0 bg-slate-900/40 opacity-0 group-hover:opacity-100 transition flex items-center justify-center backdrop-blur-[2px]">
-                                    <span class="bg-white text-slate-900 px-8 py-3 rounded-full font-bold text-xs uppercase tracking-widest shadow-2xl">Modelleri Gör</span>
+                                <div class="absolute inset-0 bg-slate-900/40 opacity-0 group-hover:opacity-100 transition flex items-center justify-center">
+                                    <span class="bg-white text-slate-900 px-6 py-2 rounded-full font-bold text-[10px] uppercase tracking-widest">İncele</span>
                                 </div>
                             </div>
-                            <div class="p-8 text-center bg-white">
-                                <h4 class="serif text-2xl font-bold text-slate-800">${cat.name}</h4>
-                                <div class="w-10 h-0.5 bg-gold mx-auto mt-4 opacity-50 group-hover:w-20 transition-all"></div>
+                            <div class="p-6 text-center">
+                                <h4 class="serif text-2xl font-bold">${cat.name}</h4>
                             </div>
                         </div>
                     `);
                 });
             </script>
+
+            <div class="category-card group cursor-pointer border-2 border-gold/30 bg-gold/5" onclick="openModal('modal-videolar')">
+                <div class="h-80 overflow-hidden relative flex items-center justify-center bg-slate-800">
+                    <i class="fas fa-play-circle text-white text-7xl opacity-50 group-hover:scale-110 transition duration-500"></i>
+                    <div class="absolute inset-0 bg-gold/20"></div>
+                </div>
+                <div class="p-6 text-center">
+                    <h4 class="serif text-2xl font-bold gold-accent">VİDEOLARIMIZ</h4>
+                </div>
+            </div>
+
         </div>
     </div>
 
     <script>
-        cats.forEach(cat => {
-            let imgs = '';
+        categories.forEach(cat => {
+            let photoGrid = '';
             for(let i=1; i<=9; i++) {
-                imgs += `<img src="${cat.id}-${i}.webp" class="w-full h-64 object-cover rounded-3xl shadow-lg border-4 border-slate-800/30 hover:border-gold transition-colors">`;
+                photoGrid += `<img src="${cat.id}-${i}.webp" class="w-full h-72 object-cover rounded-3xl shadow-lg border-2 border-white">`;
             }
-            
             document.write(`
                 <div id="modal-${cat.id}" class="modal" onclick="closeModal('modal-${cat.id}')">
                     <div class="modal-content" onclick="event.stopPropagation()">
-                        <div class="flex justify-between items-center mb-10 border-b border-white/10 pb-8">
-                            <h2 class="serif text-4xl font-bold text-white">${cat.name} <span class="gold-accent italic font-normal text-2xl ml-2">Projeleri</span></h2>
-                            <button onclick="closeModal('modal-${cat.id}')" class="text-5xl text-white hover:text-gold transition">&times;</button>
+                        <div class="flex justify-between items-center mb-8 border-b border-white/10 pb-6 text-white">
+                            <h2 class="serif text-3xl font-bold">${cat.name}</h2>
+                            <button onclick="closeModal('modal-${cat.id}')" class="text-5xl hover:text-gold transition">&times;</button>
                         </div>
-                        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-                            ${imgs}
-                        </div>
-                        <div class="mt-16 text-center">
-                            <a href="https://wa.me/905466309919" class="bg-gold text-white px-12 py-5 rounded-full font-bold text-lg shadow-2xl hover:bg-white hover:text-slate-900 transition-all inline-flex items-center gap-3">
-                                <i class="fab fa-whatsapp text-2xl"></i> WHATSAPP İLE FİYAT AL
-                            </a>
-                        </div>
+                        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">${photoGrid}</div>
                     </div>
                 </div>
             `);
         });
     </script>
 
-    <footer class="bg-white border-t border-slate-100 py-20 px-4">
-        <div class="max-w-6xl mx-auto grid grid-cols-1 md:grid-cols-3 gap-16 text-center md:text-left">
+    <div id="modal-videolar" class="modal" onclick="closeModal('modal-videolar')">
+        <div class="modal-content" onclick="event.stopPropagation()">
+            <div class="flex justify-between items-center mb-8 border-b border-white/10 pb-6 text-white">
+                <h2 class="serif text-3xl font-bold gold-accent">Üretim Videolarımız</h2>
+                <button onclick="closeModal('modal-videolar')" class="text-5xl hover:text-gold transition">&times;</button>
+            </div>
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-10">
+                <div class="space-y-2">
+                    <video class="w-full rounded-3xl border-4 border-slate-700" controls>
+                        <source src="galeri-video-1.mp4" type="video/mp4">
+                    </video>
+                    <p class="text-white text-center text-sm italic">Mutfak Montajı</p>
+                </div>
+                <div class="space-y-2">
+                    <video class="w-full rounded-3xl border-4 border-slate-700" controls>
+                        <source src="galeri-video-2.mp4" type="video/mp4">
+                    </video>
+                    <p class="text-white text-center text-sm italic">Atölye Çalışması</p>
+                </div>
+                </div>
+        </div>
+    </div>
+
+    <footer class="bg-slate-900 text-white py-16 px-4">
+        <div class="max-w-6xl mx-auto grid grid-cols-1 md:grid-cols-3 gap-12 text-center md:text-left">
             <div>
-                <h4 class="serif text-3xl font-bold mb-6">HAYALİM<span class="gold-accent">DEKOR</span></h4>
-                <p class="text-slate-400 italic leading-relaxed">Bingöl'de kişiye özel mobilya üretiminde zarafet ve kaliteyi bir araya getiriyoruz.</p>
+                <h4 class="serif text-2xl font-bold gold-accent mb-4">HAYALİM DEKOR</h4>
+                <p class="text-slate-400 text-sm italic">"Zarafeti Hayal Edin, Biz Üretelim."</p>
             </div>
             <div>
-                <h4 class="text-xs uppercase tracking-[0.3em] font-bold text-slate-300 mb-6">İletişim Bilgileri</h4>
-                <ul class="space-y-4 text-slate-600">
-                    <li><i class="fas fa-map-marker-alt gold-accent mr-3"></i> 3. Kısım Sanayi Sitesi 123/5C Bingöl</li>
-                    <li><i class="fas fa-phone gold-accent mr-3"></i> 0546 630 99 19</li>
-                    <li><i class="fab fa-instagram text-pink-500 mr-3"></i> @hayalimdekor12</li>
+                <h4 class="text-xs uppercase tracking-widest text-slate-500 mb-6">İletişim Bilgileri</h4>
+                <ul class="space-y-3 text-sm text-slate-300">
+                    <li><i class="fas fa-map-marker-alt gold-accent mr-2"></i> 3. Kısım Sanayi Sitesi 123/5C Bingöl</li>
+                    <li><i class="fas fa-phone gold-accent mr-2"></i> 0546 630 99 19</li>
+                    <li><i class="fab fa-instagram gold-accent mr-2"></i> @hayalimdekor12</li>
                 </ul>
             </div>
-            <div>
-                <h4 class="text-xs uppercase tracking-[0.3em] font-bold text-slate-300 mb-6">Bizi Takip Edin</h4>
-                <div class="flex justify-center md:justify-start gap-4">
-                    <a href="https://www.instagram.com/hayalimdekor12" target="_blank" class="w-14 h-14 bg-slate-50 rounded-2xl flex items-center justify-center hover:bg-gold hover:text-white transition shadow-sm text-2xl"><i class="fab fa-instagram"></i></a>
-                    <a href="https://wa.me/905466309919" class="w-14 h-14 bg-slate-50 rounded-2xl flex items-center justify-center hover:bg-green-500 hover:text-white transition shadow-sm text-2xl"><i class="fab fa-whatsapp"></i></a>
-                </div>
+            <div class="flex gap-4 justify-center md:justify-start">
+                <a href="https://wa.me/905466309919" class="w-12 h-12 bg-green-500 rounded-full flex items-center justify-center text-2xl shadow-lg"><i class="fab fa-whatsapp"></i></a>
+                <a href="https://www.instagram.com/hayalimdekor12" target="_blank" class="w-12 h-12 bg-pink-600 rounded-full flex items-center justify-center text-2xl shadow-lg"><i class="fab fa-instagram"></i></a>
             </div>
         </div>
-        <div class="text-center mt-20 text-slate-300 text-[10px] tracking-widest uppercase">
-            &copy; 2026 Hayalim Dekor - Premium Furniture Design
+        <div class="text-center mt-12 text-slate-600 text-[10px] border-t border-slate-800 pt-8 uppercase">
+            &copy; 2026 HAYALİM DEKOR - BİNGÖL
         </div>
     </footer>
 
-    <a href="https://wa.me/905466309919" class="fixed bottom-8 right-8 bg-green-500 text-white w-16 h-16 rounded-2xl flex items-center justify-center shadow-2xl hover:scale-110 active:scale-95 transition-all z-[100] animate-bounce">
-        <i class="fab fa-whatsapp text-3xl"></i>
+    <a href="https://wa.me/905466309919" class="fixed bottom-6 right-6 bg-green-500 text-white w-16 h-16 rounded-2xl flex items-center justify-center shadow-2xl z-[100] transition active:scale-95">
+        <i class="fab fa-whatsapp text-4xl"></i>
     </a>
 
     <script>
