@@ -5,8 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     
     <title>Hayalim Dekor | Özel Tasarım Mutfak ve Mobilya İmalatı - Bingöl</title>
-    <meta name="description" content="Hayalim Dekor: Bingöl'de mutfak dolabı, gardırop, vestiyer, TV ünitesi ve ranzada kaliteli MDF ve sunta üretimi.">
-    <meta name="keywords" content="mobilya imalatı, mutfak dolabı, gardırop yapımı, özel ölçü mobilya, Hayalim Dekor, Bingöl mobilya">
+    <meta name="description" content="Hayalim Dekor: Bingöl'de kaliteli MDF ve sunta mobilya üretimi.">
 
     <script src="https://cdn.tailwindcss.com"></script>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
@@ -15,10 +14,15 @@
     <style>
         body { font-family: 'Inter', sans-serif; }
         .hero-title { font-family: 'Playfair Display', serif; }
+        /* Turuncu yerine kullanılan yeni Soft Altın rengi */
+        .text-accent { color: #c5a059; } 
+        .bg-accent { background-color: #c5a059; }
+        .border-accent { border-color: #c5a059; }
+        
         .modal { display: none; position: fixed; z-index: 1000; left: 0; top: 0; width: 100%; height: 100%; background-color: rgba(0,0,0,0.95); overflow-y: auto; }
         .modal-content { margin: 2% auto; padding: 20px; width: 95%; max-width: 1100px; }
         .category-card:hover img { transform: scale(1.05); }
-        /* İkon butonları için özel gölge ve efekt */
+        
         .header-icon {
             width: 40px;
             height: 40px;
@@ -36,7 +40,7 @@
         <div class="max-w-6xl mx-auto px-4 py-3 flex justify-between items-center">
             <div class="flex items-center gap-2">
                 <img src="logo.jpg" alt="Hayalim Dekor Logo" class="h-10 w-auto object-contain">
-                <h1 class="text-xl font-black text-slate-900 tracking-tighter uppercase italic">HAYALİM<span class="text-amber-600">DEKOR</span></h1>
+                <h1 class="text-xl font-black text-slate-900 tracking-tighter uppercase italic">HAYALİM<span class="text-accent">DEKOR</span></h1>
             </div>
             
             <div class="flex items-center gap-2">
@@ -52,16 +56,26 @@
 
     <section class="relative bg-white py-16 px-4 overflow-hidden border-b">
         <div class="max-w-4xl mx-auto text-center relative z-10">
-            <span class="text-amber-600 font-bold uppercase tracking-[0.3em] text-[10px] mb-3 block text-center">Bingöl Mobilya Tasarım</span>
+            <span class="text-accent font-bold uppercase tracking-[0.3em] text-[10px] mb-3 block text-center uppercase">Bingöl Mobilya Tasarım</span>
             <h2 class="hero-title text-4xl md:text-7xl text-slate-900 mb-6 leading-tight">
                 Evinize Özel <br>
                 <span class="italic text-slate-700">Estetik Çözümler</span>
             </h2>
-            <div class="w-16 h-1 bg-amber-600 mx-auto mb-8"></div>
+            <div class="w-16 h-1 bg-accent mx-auto mb-8"></div>
             <p class="text-slate-500 max-w-xl mx-auto text-base md:text-lg leading-relaxed italic text-center">
                 Mutfak dolabı, gardırop ve tüm mobilya ihtiyaçlarınızda, <span class="font-semibold text-slate-800">Hayalim Dekor</span> kalitesini usta işçilikle buluşturuyoruz.
             </p>
         </div>
+    </section>
+
+    <section class="max-w-5xl mx-auto px-4 py-12">
+        <div class="rounded-3xl overflow-hidden shadow-2xl bg-black aspect-video relative">
+            <video class="w-full h-full object-cover" controls poster="video-kapak.jpg">
+                <source src="video.mp4" type="video/mp4">
+                Tarayıcınız video oynatmayı desteklemiyor.
+            </video>
+        </div>
+        <p class="text-center mt-4 text-sm text-slate-400 italic font-medium">Atölyemizden Kareler</p>
     </section>
 
     <div class="max-w-6xl mx-auto px-4 py-12">
@@ -136,120 +150,119 @@
     <div id="modal-mutfak" class="modal" onclick="closeModal('modal-mutfak')">
         <div class="modal-content" onclick="event.stopPropagation()">
             <div class="flex justify-between items-center mb-6 text-white border-b border-white/10 pb-6">
-                <h2 class="hero-title text-2xl font-bold text-amber-500">Mutfak Projelerimiz</h2>
+                <h2 class="hero-title text-2xl font-bold text-accent">Mutfak Projelerimiz</h2>
                 <button onclick="closeModal('modal-mutfak')" class="text-4xl text-white">&times;</button>
             </div>
             <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
-                <img src="mutfak-1.jpg" class="w-full h-72 object-cover rounded-xl shadow-2xl">
-                <img src="mutfak-2.jpg" class="w-full h-72 object-cover rounded-xl shadow-2xl">
-                <img src="mutfak-3.jpg" class="w-full h-72 object-cover rounded-xl shadow-2xl">
+                <img src="mutfak-1.webp" class="w-full h-72 object-cover rounded-xl shadow-2xl">
+                <img src="mutfak-2.webp" class="w-full h-72 object-cover rounded-xl shadow-2xl">
+                <img src="mutfak-3.webp" class="w-full h-72 object-cover rounded-xl shadow-2xl">
             </div>
-            <div class="mt-12 text-center"><a href="https://wa.me/905466309919" class="bg-green-600 text-white px-8 py-3 rounded-full font-bold inline-block shadow-lg italic text-sm">Fiyat Teklifi Al</a></div>
+            <div class="mt-12 text-center"><a href="https://wa.me/905466309919" class="bg-green-600 text-white px-8 py-3 rounded-full font-bold inline-block shadow-lg italic text-sm transition hover:bg-green-700">Fiyat Teklifi Al</a></div>
         </div>
     </div>
 
     <div id="modal-gardrop" class="modal" onclick="closeModal('modal-gardrop')">
         <div class="modal-content" onclick="event.stopPropagation()">
             <div class="flex justify-between items-center mb-6 text-white border-b border-white/10 pb-6">
-                <h2 class="hero-title text-2xl font-bold text-amber-500">Gardırop Modelleri</h2>
+                <h2 class="hero-title text-2xl font-bold text-accent">Gardırop Modelleri</h2>
                 <button onclick="closeModal('modal-gardrop')" class="text-4xl text-white">&times;</button>
             </div>
             <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
-                <img src="gardrop-1.jpg" class="w-full h-72 object-cover rounded-xl shadow-2xl">
-                <img src="gardrop-2.jpg" class="w-full h-72 object-cover rounded-xl shadow-2xl">
-                <img src="gardrop-3.jpg" class="w-full h-72 object-cover rounded-xl shadow-2xl">
+                <img src="gardrop-1.webp" class="w-full h-72 object-cover rounded-xl shadow-2xl">
+                <img src="gardrop-2.webp" class="w-full h-72 object-cover rounded-xl shadow-2xl">
+                <img src="gardrop-3.webp" class="w-full h-72 object-cover rounded-xl shadow-2xl">
             </div>
-            <div class="mt-12 text-center"><a href="https://wa.me/905466309919" class="bg-green-600 text-white px-8 py-3 rounded-full font-bold inline-block shadow-lg italic text-sm">Fiyat Teklifi Al</a></div>
+            <div class="mt-12 text-center"><a href="https://wa.me/905466309919" class="bg-green-600 text-white px-8 py-3 rounded-full font-bold inline-block shadow-lg italic text-sm transition hover:bg-green-700">Fiyat Teklifi Al</a></div>
         </div>
     </div>
 
     <div id="modal-tv" class="modal" onclick="closeModal('modal-tv')">
         <div class="modal-content" onclick="event.stopPropagation()">
             <div class="flex justify-between items-center mb-6 text-white border-b border-white/10 pb-6">
-                <h2 class="hero-title text-2xl font-bold text-amber-500">TV Üniteleri</h2>
+                <h2 class="hero-title text-2xl font-bold text-accent">TV Üniteleri</h2>
                 <button onclick="closeModal('modal-tv')" class="text-4xl text-white">&times;</button>
             </div>
             <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
-                <img src="tv-1.jpg" class="w-full h-72 object-cover rounded-xl shadow-2xl">
-                <img src="tv-2.jpg" class="w-full h-72 object-cover rounded-xl shadow-2xl">
-                <img src="tv-3.jpg" class="w-full h-72 object-cover rounded-xl shadow-2xl">
+                <img src="tv-1.webp" class="w-full h-72 object-cover rounded-xl shadow-2xl">
+                <img src="tv-2.webp" class="w-full h-72 object-cover rounded-xl shadow-2xl">
+                <img src="tv-3.webp" class="w-full h-72 object-cover rounded-xl shadow-2xl">
             </div>
-            <div class="mt-12 text-center"><a href="https://wa.me/905466309919" class="bg-green-600 text-white px-8 py-3 rounded-full font-bold inline-block shadow-lg italic text-sm">Fiyat Teklifi Al</a></div>
+            <div class="mt-12 text-center"><a href="https://wa.me/905466309919" class="bg-green-600 text-white px-8 py-3 rounded-full font-bold inline-block shadow-lg italic text-sm transition hover:bg-green-700">Fiyat Teklifi Al</a></div>
         </div>
     </div>
 
     <div id="modal-vestiyer" class="modal" onclick="closeModal('modal-vestiyer')">
         <div class="modal-content" onclick="event.stopPropagation()">
             <div class="flex justify-between items-center mb-6 text-white border-b border-white/10 pb-6">
-                <h2 class="hero-title text-2xl font-bold text-amber-500">Vestiyer Modelleri</h2>
+                <h2 class="hero-title text-2xl font-bold text-accent">Vestiyer Modelleri</h2>
                 <button onclick="closeModal('modal-vestiyer')" class="text-4xl text-white">&times;</button>
             </div>
             <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
-                <img src="vestiyer-1.jpg" class="w-full h-72 object-cover rounded-xl shadow-2xl">
-                <img src="vestiyer-2.jpg" class="w-full h-72 object-cover rounded-xl shadow-2xl">
-                <img src="vestiyer-3.jpg" class="w-full h-72 object-cover rounded-xl shadow-2xl">
+                <img src="vestiyer-1.webp" class="w-full h-72 object-cover rounded-xl shadow-2xl">
+                <img src="vestiyer-2.webp" class="w-full h-72 object-cover rounded-xl shadow-2xl">
+                <img src="vestiyer-3.webp" class="w-full h-72 object-cover rounded-xl shadow-2xl">
             </div>
-            <div class="mt-12 text-center"><a href="https://wa.me/905466309919" class="bg-green-600 text-white px-8 py-3 rounded-full font-bold inline-block shadow-lg italic text-sm">Fiyat Teklifi Al</a></div>
+            <div class="mt-12 text-center"><a href="https://wa.me/905466309919" class="bg-green-600 text-white px-8 py-3 rounded-full font-bold inline-block shadow-lg italic text-sm transition hover:bg-green-700">Fiyat Teklifi Al</a></div>
         </div>
     </div>
 
     <div id="modal-ranza" class="modal" onclick="closeModal('modal-ranza')">
         <div class="modal-content" onclick="event.stopPropagation()">
             <div class="flex justify-between items-center mb-6 text-white border-b border-white/10 pb-6">
-                <h2 class="hero-title text-2xl font-bold text-amber-500">Ranza Modelleri</h2>
+                <h2 class="hero-title text-2xl font-bold text-accent">Ranza Modelleri</h2>
                 <button onclick="closeModal('modal-ranza')" class="text-4xl text-white">&times;</button>
             </div>
             <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
-                <img src="ranza-1.jpg" class="w-full h-72 object-cover rounded-xl shadow-2xl">
-                <img src="ranza-2.jpg" class="w-full h-72 object-cover rounded-xl shadow-2xl">
-                <img src="ranza-3.jpg" class="w-full h-72 object-cover rounded-xl shadow-2xl">
+                <img src="ranza-1.webp" class="w-full h-72 object-cover rounded-xl shadow-2xl">
+                <img src="ranza-2.webp" class="w-full h-72 object-cover rounded-xl shadow-2xl">
+                <img src="ranza-3.webp" class="w-full h-72 object-cover rounded-xl shadow-2xl">
             </div>
-            <div class="mt-12 text-center"><a href="https://wa.me/905466309919" class="bg-green-600 text-white px-8 py-3 rounded-full font-bold inline-block shadow-lg italic text-sm">Fiyat Teklifi Al</a></div>
+            <div class="mt-12 text-center"><a href="https://wa.me/905466309919" class="bg-green-600 text-white px-8 py-3 rounded-full font-bold inline-block shadow-lg italic text-sm transition hover:bg-green-700">Fiyat Teklifi Al</a></div>
         </div>
     </div>
 
     <div id="modal-masa" class="modal" onclick="closeModal('modal-masa')">
         <div class="modal-content" onclick="event.stopPropagation()">
             <div class="flex justify-between items-center mb-6 text-white border-b border-white/10 pb-6">
-                <h2 class="hero-title text-2xl font-bold text-amber-500">Masa Modelleri</h2>
+                <h2 class="hero-title text-2xl font-bold text-accent">Masa Modelleri</h2>
                 <button onclick="closeModal('modal-masa')" class="text-4xl text-white">&times;</button>
             </div>
             <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
-                <img src="masa-1.jpg" class="w-full h-72 object-cover rounded-xl shadow-2xl">
-                <img src="masa-2.jpg" class="w-full h-72 object-cover rounded-xl shadow-2xl">
-                <img src="masa-3.jpg" class="w-full h-72 object-cover rounded-xl shadow-2xl">
+                <img src="masa-1.webp" class="w-full h-72 object-cover rounded-xl shadow-2xl">
+                <img src="masa-2.webp" class="w-full h-72 object-cover rounded-xl shadow-2xl">
+                <img src="masa-3.webp" class="w-full h-72 object-cover rounded-xl shadow-2xl">
             </div>
-            <div class="mt-12 text-center"><a href="https://wa.me/905466309919" class="bg-green-600 text-white px-8 py-3 rounded-full font-bold inline-block shadow-lg italic text-sm">Fiyat Teklifi Al</a></div>
+            <div class="mt-12 text-center"><a href="https://wa.me/905466309919" class="bg-green-600 text-white px-8 py-3 rounded-full font-bold inline-block shadow-lg italic text-sm transition hover:bg-green-700">Fiyat Teklifi Al</a></div>
         </div>
     </div>
 
     <footer class="bg-slate-900 text-white py-12 px-4">
         <div class="max-w-6xl mx-auto grid grid-cols-1 md:grid-cols-3 gap-10">
             <div>
-                
-                <h4 class="font-black text-xl mb-4 tracking-tighter uppercase italic text-amber-500 text-center md:text-left">HAYALİM DEKOR</h4>
-                <p class="text-slate-400 text-sm italic border-l border-amber-600 pl-3 text-center md:text-left">
+                <h4 class="font-black text-xl mb-4 tracking-tighter uppercase italic text-accent text-center md:text-left">HAYALİM DEKOR</h4>
+                <p class="text-slate-400 text-sm italic border-l border-accent pl-3 text-center md:text-left uppercase">
                     Üçüncü Kısım Sanayi Sitesi <br> 123/5C Bingöl/Merkez
                 </p>
             </div>
             <div class="text-center md:text-left">
-                <h4 class="font-bold text-sm mb-4 uppercase tracking-widest text-slate-500">İletişim</h4>
-                <ul class="space-y-3 text-slate-300 text-sm">
-                    <li><a href="tel:05466309919" class="hover:text-white"><i class="fas fa-phone text-amber-600 mr-2"></i> 0546 630 99 19</a></li>
-                    <li><a href="https://www.instagram.com/hayalimdekor12" target="_blank" class="hover:text-white"><i class="fab fa-instagram text-pink-500 mr-2"></i> @hayalimdekor12</a></li>
-                    <li><i class="fas fa-map-marker-alt text-amber-600 mr-2"></i> Bingöl / Merkez</li>
+                <h4 class="font-bold text-sm mb-4 uppercase tracking-widest text-slate-500 uppercase">İletişim</h4>
+                <ul class="space-y-3 text-slate-300 text-sm italic">
+                    <li><a href="tel:05466309919" class="hover:text-white transition"><i class="fas fa-phone text-accent mr-2"></i> 0546 630 99 19</a></li>
+                    <li><a href="https://www.instagram.com/hayalimdekor12" target="_blank" class="hover:text-white transition"><i class="fab fa-instagram text-pink-500 mr-2"></i> @hayalimdekor12</a></li>
+                    <li><i class="fas fa-map-marker-alt text-accent mr-2"></i> Bingöl / Merkez</li>
                 </ul>
             </div>
             <div class="flex gap-3 justify-center md:justify-start items-start">
                 <a href="https://www.instagram.com/hayalimdekor12" target="_blank" class="w-10 h-10 bg-slate-800 rounded-full flex items-center justify-center hover:bg-pink-600 transition shadow-sm">
-                    <i class="fab fa-instagram text-lg"></i>
+                    <i class="fab fa-instagram text-lg text-white"></i>
                 </a>
                 <a href="https://wa.me/905466309919" target="_blank" class="w-10 h-10 bg-slate-800 rounded-full flex items-center justify-center hover:bg-green-600 transition shadow-sm">
-                    <i class="fab fa-whatsapp text-lg"></i>
+                    <i class="fab fa-whatsapp text-lg text-white"></i>
                 </a>
             </div>
         </div>
-        <div class="text-center mt-12 text-slate-600 text-[10px] border-t border-slate-800 pt-8 tracking-widest uppercase">
+        <div class="text-center mt-12 text-slate-600 text-[10px] border-t border-slate-800 pt-8 tracking-widest uppercase italic">
             &copy; 2026 HAYALİM DEKOR - BİNGÖL
         </div>
     </footer>
