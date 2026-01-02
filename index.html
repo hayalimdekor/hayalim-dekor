@@ -7,9 +7,9 @@
     <script src="https://cdn.tailwindcss.com"></script>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
     <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=Inter:wght@300;400;600&display=swap" rel="stylesheet">
-   
+    
     <style>
-        body { font-family: 'Inter', sans-serif; background-color: #faf9f6; }
+        body { font-family: 'Inter', sans-serif; background-color: #faf9f6; scroll-behavior: smooth; }
         .serif { font-family: 'Playfair Display', serif; }
         .gold-accent { color: #D4AF37; }
         .bg-gold { background-color: #D4AF37; }
@@ -21,188 +21,206 @@
         .square-video-container { width: 100%; max-width: 600px; margin: 0 auto; aspect-ratio: 1 / 1; border-radius: 2.5rem; overflow: hidden; box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.15); border: 8px solid white; background-color: #000; }
         .vertical-video { aspect-ratio: 9/16; width: 100%; object-fit: cover; border-radius: 1.5rem; border: 4px solid #334155; }
         .map-container { width: 100%; height: 500px; border-radius: 2.5rem; overflow: hidden; box-shadow: 0 20px 25px -5px rgb(0 0 0 / 0.1); border: 8px solid white; }
+        
+        /* Blog Ekranı Stili */
+        #blogSection { display: none; min-height: 100vh; background-color: #faf9f6; }
     </style>
 </head>
 <body class="text-slate-900">
 
     <nav class="bg-white/80 backdrop-blur-md sticky top-0 z-50 border-b border-slate-100">
         <div class="max-w-6xl mx-auto px-4 py-3 flex justify-between items-center">
-            <div class="flex items-center gap-2">
+            <div class="flex items-center gap-2 cursor-pointer" onclick="showMain()">
                 <img src="logo.jpg" alt="Hayalim Dekor Logo" class="h-10 w-auto object-contain">
                 <h1 class="text-xl font-bold tracking-tight italic uppercase text-slate-800">HAYALİM<span class="gold-accent text-slate-900 text-lg">GRUP</span></h1>
             </div>
-            <div class="flex items-center gap-2">
-                <a href="https://www.instagram.com/hayalimdekor12" target="_blank" class="header-icon text-pink-600 hover:bg-pink-600 hover:text-white transition"><i class="fab fa-instagram text-xl"></i></a>
-                <a href="https://wa.me/905466309919" class="header-icon bg-green-500 text-white hover:bg-green-600 shadow-md transition"><i class="fab fa-whatsapp text-xl"></i></a>
+            <div class="flex items-center gap-4">
+                <button onclick="showBlog()" class="text-xs font-bold uppercase tracking-widest hover:text-gold transition">Blog</button>
+                <div class="flex items-center gap-2">
+                    <a href="https://www.instagram.com/hayalimdekor12" target="_blank" class="header-icon text-pink-600 hover:bg-pink-600 hover:text-white transition"><i class="fab fa-instagram text-xl"></i></a>
+                    <a href="https://wa.me/905466309919" class="header-icon bg-green-500 text-white hover:bg-green-600 shadow-md transition"><i class="fab fa-whatsapp text-xl"></i></a>
+                </div>
             </div>
         </div>
     </nav>
 
-    <section class="bg-white py-12 px-4 text-center">
-        <p class="gold-accent font-semibold tracking-[0.4em] text-[10px] mb-4 uppercase text-slate-400">Bingöl Mobilya Tasarım & İmalat</p>
-        <h2 class="serif text-5xl md:text-7xl text-slate-800 mb-6 leading-tight uppercase">Hayallerinizi <br> <span class="italic font-normal text-slate-600">Gerçeğe Dönüştürün</span></h2>
-        <div class="w-16 h-0.5 bg-gold mx-auto"></div>
-    </section>
+    <main id="mainSection">
+        <section class="bg-white py-12 px-4 text-center">
+            <p class="gold-accent font-semibold tracking-[0.4em] text-[10px] mb-4 uppercase text-slate-400">Bingöl Mobilya Tasarım & İmalat</p>
+            <h2 class="serif text-5xl md:text-7xl text-slate-800 mb-6 leading-tight uppercase">Hayallerinizi <br> <span class="italic font-normal text-slate-600">Gerçeğe Dönüştürün</span></h2>
+            <div class="w-16 h-0.5 bg-gold mx-auto"></div>
+        </section>
 
-    <section class="max-w-6xl mx-auto px-4 py-4 mb-8">
-        <div class="square-video-container">
-            <video class="w-full h-full object-cover" controls poster="video-kapak.jpg" playsinline>
-                <source src="video-ana.mp4" type="video/mp4">
-            </video>
-        </div>
-    </section>
+        <section class="max-w-6xl mx-auto px-4 py-4 mb-8">
+            <div class="square-video-container">
+                <video class="w-full h-full object-cover" controls poster="video-kapak.jpg" playsinline>
+                    <source src="video-ana.mp4" type="video/mp4">
+                </video>
+            </div>
+        </section>
 
-    <section class="max-w-5xl mx-auto px-6 py-20 border-t border-slate-100">
-        <div class="grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
-            <div class="relative">
-                <img src="hakkimizda.jpg" alt="Hayalim Dekor Atölye" class="rounded-[2.5rem] shadow-2xl border-4 border-white object-cover h-[400px] w-full">
-                <div class="absolute -bottom-6 -right-6 bg-gold text-white p-6 rounded-3xl shadow-xl hidden md:block text-center">
-                    <p class="text-3xl font-bold">15+</p>
-                    <p class="text-[10px] uppercase tracking-widest font-semibold">Yıllık Tecrübe</p>
+        <section class="max-w-5xl mx-auto px-6 py-20 border-t border-slate-100">
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
+                <div class="relative">
+                    <img src="hakkimizda.jpg" alt="Hayalim Dekor Atölye" class="rounded-[2.5rem] shadow-2xl border-4 border-white object-cover h-[400px] w-full">
+                    <div class="absolute -bottom-6 -right-6 bg-gold text-white p-6 rounded-3xl shadow-xl hidden md:block text-center">
+                        <p class="text-3xl font-bold">15+</p>
+                        <p class="text-[10px] uppercase tracking-widest font-semibold">Yıllık Tecrübe</p>
+                    </div>
+                </div>
+                <div class="space-y-6">
+                    <h3 class="serif text-4xl font-bold text-slate-800 italic uppercase">Biz Kimiz?</h3>
+                    <p class="text-slate-600 leading-relaxed text-lg italic">
+                        Bingöl'de **Hayalim Dekor** olarak, modern teknolojiyi geleneksel usta işçiliğiyle birleştiriyoruz. Kullanım kolaylığı ve estetiği ön planda tutan mobilyalar üretiyoruz.
+                    </p>
+                    <div class="pt-4 grid grid-cols-2 gap-4 text-center text-slate-800">
+                        <div class="bg-white p-4 rounded-2xl border border-slate-100 shadow-sm"><i class="fas fa-hammer gold-accent mb-2"></i><p class="font-bold text-[10px] uppercase">Kalite</p></div>
+                        <div class="bg-white p-4 rounded-2xl border border-slate-100 shadow-sm"><i class="fas fa-pencil-ruler gold-accent mb-2"></i><p class="font-bold text-[10px] uppercase">Proje</p></div>
+                    </div>
                 </div>
             </div>
-            <div class="space-y-6">
-                <h3 class="serif text-4xl font-bold text-slate-800 italic">Biz Kimiz?</h3>
-                <p class="text-slate-600 leading-relaxed text-lg">
-                    Bingöl'de **Hayalim Dekor** olarak, modern teknolojiyi geleneksel usta işçiliğiyle birleştiriyoruz. Kullanım kolaylığı ve estetiği ön planda tutan mobilyalar üretiyoruz.
-                </p>
-                <div class="pt-4 grid grid-cols-2 gap-4 text-center text-slate-800">
-                    <div class="bg-white p-4 rounded-2xl border border-slate-100 shadow-sm"><i class="fas fa-hammer gold-accent mb-2"></i><p class="font-bold text-[10px] uppercase">Kalite</p></div>
-                    <div class="bg-white p-4 rounded-2xl border border-slate-100 shadow-sm"><i class="fas fa-pencil-ruler gold-accent mb-2"></i><p class="font-bold text-[10px] uppercase">Proje</p></div>
-                </div>
-            </div>
-        </div>
-    </section>
+        </section>
 
-    <div class="max-w-7xl mx-auto px-4 py-16 bg-white/50 rounded-[4rem] mb-20 shadow-inner">
-        <div class="text-center mb-16 px-4">
-            <h3 class="serif text-4xl font-bold mb-4 uppercase text-slate-800">Koleksiyonlarımız</h3>
-            <p class="text-slate-400 italic text-sm tracking-widest uppercase">Tasarımlarımızı İnceleyin</p>
+        <div class="max-w-7xl mx-auto px-4 py-16 bg-white/50 rounded-[4rem] mb-20 shadow-inner">
+            <div class="text-center mb-16 px-4">
+                <h3 class="serif text-4xl font-bold mb-4 uppercase text-slate-800">Koleksiyonlarımız</h3>
+                <p class="text-slate-400 italic text-sm tracking-widest uppercase">Tasarımlarımızı İnceleyin</p>
+            </div>
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-10" id="catGrid">
+                </div>
         </div>
-        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-10">
-            <script>
-                const categories = [
-                    {id: 'mutfak', name: 'Mutfak Dolapları'},
-                    {id: 'gardrop', name: 'Gardırop & Ray Dolap'},
-                    {id: 'tv', name: 'TV Üniteleri'},
-                    {id: 'vestiyer', name: 'Vestiyer & Portmanto'},
-                    {id: 'ranza', name: 'Ranza & Çocuk Odası'},
-                    {id: 'masa', name: 'Çalışma Masaları'}
-                ];
-                categories.forEach(cat => {
-                    document.write(`
-                        <div class="category-card group cursor-pointer" onclick="openModal('modal-${cat.id}')">
-                            <div class="h-80 overflow-hidden relative">
-                                <img src="${cat.id}-main.jpg" class="w-full h-full object-cover">
-                                <div class="absolute inset-0 bg-slate-900/40 opacity-0 group-hover:opacity-100 transition flex items-center justify-center">
-                                    <span class="bg-white text-slate-900 px-6 py-2 rounded-full font-bold text-[10px] uppercase tracking-widest shadow-xl">Görüntüle</span>
-                                </div>
-                            </div>
-                            <div class="p-6 text-center"><h4 class="serif text-2xl font-bold uppercase text-slate-800">${cat.name}</h4></div>
+
+        <section class="max-w-6xl mx-auto px-6 py-20 bg-white rounded-[3rem] shadow-sm mb-12">
+            <div class="text-center mb-12">
+                <h3 class="serif text-4xl font-bold text-slate-800 uppercase mb-4 italic uppercase">Bize Ulaşın</h3>
+                <p class="text-slate-500 italic text-sm uppercase tracking-[0.2em]">Mağazamıza ve Atölyemize Bekleriz</p>
+            </div>
+            <div class="grid grid-cols-1 lg:grid-cols-3 gap-12">
+                <div class="space-y-8">
+                    <div class="bg-slate-50 p-8 rounded-[2rem] border border-slate-100">
+                        <h5 class="font-bold uppercase text-[10px] text-gold tracking-widest mb-4 uppercase">İletişim Bilgileri</h5>
+                        <p class="text-slate-700 font-medium italic uppercase tracking-tighter"><i class="fas fa-map-marker-alt mr-2 text-slate-400"></i> Ekinyolu Yeni Sanayi Sitesi, 3. Kısım No:123/5C, Bingöl/Merkez</p>
+                        <p class="text-slate-800 font-bold text-xl mt-4"><i class="fas fa-phone mr-2 text-slate-400 text-sm"></i> 0546 630 99 19</p>
+                    </div>
+                    <div class="bg-slate-900 p-8 rounded-[2rem] text-white">
+                        <h5 class="font-bold uppercase text-[10px] gold-accent tracking-widest mb-6 uppercase">Çalışma Saatleri</h5>
+                        <div class="space-y-3 text-xs uppercase opacity-80">
+                            <div class="flex justify-between border-b border-white/10 pb-2"><span>Pzt - Cmt</span><span>08:30 – 17:00</span></div>
+                            <div class="flex justify-between text-red-400 font-bold"><span>Pazar</span><span>KAPALI</span></div>
                         </div>
-                    `);
-                });
-            </script>
+                    </div>
+                    <a href="https://maps.google.com/?q=HAYALİM+Grup+mobilya+ve+dizayn" target="_blank" class="bg-gold text-white block text-center py-5 rounded-2xl font-bold uppercase text-xs tracking-widest hover:scale-105 transition shadow-xl">Yol Tarifi Al</a>
+                </div>
+                <div class="lg:col-span-2">
+                    <div class="map-container">
+                        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3106.1824424363234!2d40.55891967657989!3d38.89694204689025!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4073cf78ef6fef4f%3A0xf44b94f42c67aca7!2sHAYAL%C4%B0M%20Grup%20mobilya%20ve%20dizayn!5e0!3m2!1str!2str!4v1715632000000!5m2!1str!2str" width="100%" height="100%" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <footer class="bg-slate-900 text-white py-12 px-4 text-center">
+            <p class="serif text-xl font-bold gold-accent uppercase italic">HAYALİM DEKOR</p>
+            <p class="text-[9px] tracking-widest text-slate-500 mt-4 italic uppercase">© 2026 Bingöl / Türkiye</p>
+        </footer>
+    </main>
+
+    <div id="blogSection">
+        <section class="max-w-4xl mx-auto px-6 py-20">
+            <button onclick="showMain()" class="text-xs font-bold uppercase tracking-widest hover:text-gold mb-10 inline-block"><i class="fas fa-arrow-left mr-2"></i> Geri Dön</button>
+            
+            <h2 class="serif text-5xl font-bold mb-12 text-center uppercase">Dekorasyon <span class="gold-accent italic">Rehberi</span></h2>
+            
+            <article class="bg-white rounded-[3rem] overflow-hidden shadow-xl border border-slate-100 mb-12">
+                <img src="simulator-base.png" alt="Blog Görseli" class="w-full h-96 object-cover">
+                <div class="p-10 space-y-6 text-center">
+                    <span class="gold-accent font-bold text-[10px] tracking-widest uppercase">Uzman Görüşü</span>
+                    <h3 class="serif text-3xl font-bold uppercase">Mutfak Tasarımında Malzeme Seçimi</h3>
+                    <p class="text-slate-600 leading-relaxed italic uppercase">
+                        Modern bir mutfak sadece güzel görünmemeli, aynı zamanda uzun yıllar Bingöl'ün iklim şartlarına ve kullanım yoğunluğuna dayanmalıdır. Lake kapakların şıklığı mı, yoksa mdf lamın dayanıklılığı mı? Bu rehberimizde en doğru kararı vermenize yardımcı oluyoruz.
+                    </p>
+                    <div class="pt-6 border-t border-slate-50">
+                        <p class="text-slate-800 font-bold italic uppercase">Hayallerinizi birlikte inşa edelim.</p>
+                    </div>
+                </div>
+            </article>
+        </section>
+        
+        <footer class="bg-slate-50 py-12 text-center">
+            <button onclick="showMain()" class="bg-gold text-white px-10 py-4 rounded-full font-bold uppercase text-xs tracking-widest shadow-xl">Ana Sayfaya Dön</button>
+        </footer>
+    </div>
+
+    <a href="https://wa.me/905466309919" class="fixed bottom-6 right-6 bg-green-500 text-white w-16 h-16 rounded-2xl flex items-center justify-center shadow-2xl z-[100] animate-bounce hover:scale-110 transition"><i class="fab fa-whatsapp text-4xl"></i></a>
+
+    <script>
+        const categories = [
+            {id: 'mutfak', name: 'Mutfak Dolapları'},
+            {id: 'gardrop', name: 'Gardırop & Ray Dolap'},
+            {id: 'tv', name: 'TV Üniteleri'},
+            {id: 'vestiyer', name: 'Vestiyer & Portmanto'},
+            {id: 'ranza', name: 'Ranza & Çocuk Odası'},
+            {id: 'masa', name: 'Çalışma Masaları'}
+        ];
+
+        const grid = document.getElementById('catGrid');
+        categories.forEach(cat => {
+            // Katalog Kutuları
+            grid.innerHTML += `
+                <div class="category-card group cursor-pointer" onclick="openModal('modal-${cat.id}')">
+                    <div class="h-80 overflow-hidden relative">
+                        <img src="${cat.id}-main.jpg" class="w-full h-full object-cover">
+                        <div class="absolute inset-0 bg-slate-900/40 opacity-0 group-hover:opacity-100 transition flex items-center justify-center">
+                            <span class="bg-white text-slate-900 px-6 py-2 rounded-full font-bold text-[10px] uppercase shadow-xl">Görüntüle</span>
+                        </div>
+                    </div>
+                    <div class="p-6 text-center uppercase font-bold italic"><h4 class="serif text-2xl uppercase">${cat.name}</h4></div>
+                </div>
+            `;
+            
+            // Modallar
+            let imgs = '';
+            for(let i=1; i<=9; i++) { imgs += `<img src="${cat.id}-${i}.webp" class="w-full h-72 object-cover rounded-3xl border-2 border-white shadow-lg">`; }
+            document.body.innerHTML += `
+                <div id="modal-${cat.id}" class="modal" onclick="closeModal('modal-${cat.id}')">
+                    <div class="modal-content" onclick="event.stopPropagation()">
+                        <div class="flex justify-between items-center mb-8 border-b border-white/10 pb-6 text-white text-center"><h2 class="serif text-3xl font-bold uppercase">${cat.name}</h2><button onclick="closeModal('modal-${cat.id}')" class="text-5xl hover:text-gold transition">×</button></div>
+                        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">${photoGrid = imgs}</div>
+                    </div>
+                </div>
+            `;
+        });
+
+        // Video Kutusu Ekle
+        grid.innerHTML += `
             <div class="category-card group cursor-pointer border-2 border-gold/30 bg-slate-900 shadow-xl" onclick="openModal('modal-videolar')">
                 <div class="h-80 overflow-hidden relative flex items-center justify-center">
                     <div class="text-center z-10"><i class="fas fa-play-circle text-white text-6xl mb-4 opacity-80 group-hover:scale-110 transition duration-500"></i><p class="text-white font-bold tracking-[0.2em] text-[10px] uppercase">VİDEO GALERİ</p></div>
                 </div>
-                <div class="p-6 text-center"><h4 class="serif text-2xl font-bold gold-accent uppercase">ÜRETİM VİDEOLARI</h4></div>
+                <div class="p-6 text-center uppercase font-bold italic gold-accent uppercase">ÜRETİM VİDEOLARI</div>
             </div>
-        </div>
-    </div>
+        `;
 
-    <section class="max-w-6xl mx-auto px-6 py-20 bg-white rounded-[3rem] shadow-sm mb-12">
-        <div class="text-center mb-12">
-            <h3 class="serif text-4xl font-bold text-slate-800 uppercase mb-4 italic">Bize Ulaşın</h3>
-            <p class="text-slate-500 italic text-sm uppercase tracking-[0.2em]">Mağazamıza ve Atölyemize Bekleriz</p>
-        </div>
-       
-        <div class="grid grid-cols-1 lg:grid-cols-3 gap-12">
-            <div class="space-y-8">
-                <div class="bg-slate-50 p-8 rounded-[2rem] border border-slate-100">
-                    <h5 class="font-bold uppercase text-[10px] text-gold tracking-widest mb-4">İletişim Bilgileri</h5>
-                    <div class="space-y-4">
-                        <p class="text-slate-700 font-medium italic"><i class="fas fa-map-marker-alt mr-2 text-slate-400"></i> Ekinyolu Yeni Sanayi Sitesi, 3. Kısım No:123/5C, Bingöl/Merkez</p>
-                        <p class="text-slate-800 font-bold text-xl"><i class="fas fa-phone mr-2 text-slate-400 text-sm"></i> 0546 630 99 19</p>
-                    </div>
-                </div>
+        let vids = '';
+        for(let i=1; i<=9; i++) { vids += `<div class="space-y-2 text-center"><video class="vertical-video shadow-2xl" controls playsinline><source src="video-${i}.mp4" type="video/mp4"></video></div>`; }
+        document.body.innerHTML += `<div id="modal-videolar" class="modal" onclick="closeModal('modal-videolar')"><div class="modal-content" onclick="event.stopPropagation()"><div class="flex justify-between items-center mb-8 border-b border-white/10 pb-6 text-white text-center uppercase font-bold tracking-widest"><h2 class="serif text-3xl gold-accent">VİDEOLAR</h2><button onclick="closeModal('modal-videolar')" class="text-5xl hover:text-gold transition">×</button></div><div class="grid grid-cols-2 md:grid-cols-3 gap-6">${vids}</div></div></div>`;
 
-                <div class="bg-slate-900 p-8 rounded-[2rem] text-white">
-                    <h5 class="font-bold uppercase text-[10px] gold-accent tracking-widest mb-6">Çalışma Saatleri</h5>
-                    <div class="space-y-3 text-sm">
-                        <div class="flex justify-between border-b border-white/10 pb-2"><span class="opacity-60 uppercase">Pazartesi</span><span>08:30 – 17:00</span></div>
-                        <div class="flex justify-between border-b border-white/10 pb-2"><span class="opacity-60 uppercase">Salı</span><span>08:30 – 17:00</span></div>
-                        <div class="flex justify-between border-b border-white/10 pb-2"><span class="opacity-60 uppercase">Çarşamba</span><span>08:30 – 17:00</span></div>
-                        <div class="flex justify-between border-b border-white/10 pb-2"><span class="opacity-60 uppercase">Perşembe</span><span>08:30 – 17:00</span></div>
-                        <div class="flex justify-between border-b border-white/10 pb-2"><span class="opacity-60 uppercase">Cuma</span><span>08:30 – 17:00</span></div>
-                        <div class="flex justify-between border-b border-white/10 pb-2"><span class="opacity-60 uppercase">Cumartesi</span><span>08:30 – 17:00</span></div>
-                        <div class="flex justify-between text-red-400 font-bold"><span class="opacity-60 uppercase">Pazar</span><span>KAPALI</span></div>
-                    </div>
-                </div>
+        // Sayfa Değiştirme
+        function showBlog() {
+            document.getElementById('mainSection').style.display = 'none';
+            document.getElementById('blogSection').style.display = 'block';
+            window.scrollTo(0, 0);
+        }
+        function showMain() {
+            document.getElementById('blogSection').style.display = 'none';
+            document.getElementById('mainSection').style.display = 'block';
+            window.scrollTo(0, 0);
+        }
 
-                <a href="https://www.google.com/maps?daddr=HAYALİM+Grup+mobilya+ve+dizayn" target="_blank" class="bg-gold text-white block text-center py-5 rounded-2xl font-bold uppercase text-xs tracking-widest hover:scale-105 transition shadow-xl">Yol Tarifi Al</a>
-            </div>
-
-            <div class="lg:col-span-2">
-                <div class="map-container">
-                    <iframe
-                        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3110.1517452668383!2d40.55891967651034!3d38.89650704652233!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4074f3f8ef6fef4f%3A0xfe4b94f42c5facfb!2sHAYAL%C4%B0M%20Grup%20mobilya%20ve%20dizayn!5e0!3m2!1str!2str!4v1715600000000!5m2!1str!2str"
-                        width="100%" height="100%" style="border:0;" allowfullscreen="" loading="lazy">
-                    </iframe>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <footer class="bg-slate-900 text-white py-16 px-4">
-        <div class="max-w-6xl mx-auto grid grid-cols-1 md:grid-cols-3 gap-12 text-center md:text-left">
-            <div><h4 class="serif text-2xl font-bold gold-accent mb-4 italic uppercase tracking-wider">HAYALİM DEKOR</h4><p class="text-slate-400 text-xs italic border-l-2 border-gold pl-3 uppercase">Üst Düzey Mobilya Tasarımı <br> Bingöl / Merkez</p></div>
-            <div><h4 class="text-xs uppercase tracking-[0.3em] text-slate-500 mb-6 uppercase">Hızlı Erişim</h4><ul class="space-y-3 text-sm text-slate-300 italic"><li><a href="tel:05466309919" class="hover:text-gold"><i class="fas fa-phone gold-accent mr-2"></i> 0546 630 99 19</a></li><li><i class="fab fa-instagram text-pink-500 mr-2"></i> @hayalimdekor12</li></ul></div>
-            <div class="flex gap-4 justify-center md:justify-start">
-                <a href="https://wa.me/905466309919" class="w-12 h-12 bg-green-500 rounded-2xl flex items-center justify-center text-2xl shadow-xl hover:scale-110 transition"><i class="fab fa-whatsapp"></i></a>
-                <a href="https://www.instagram.com/hayalimdekor12" target="_blank" class="w-12 h-12 bg-pink-600 rounded-2xl flex items-center justify-center text-2xl shadow-xl hover:scale-110 transition"><i class="fab fa-instagram"></i></a>
-            </div>
-        </div>
-        <div class="text-center mt-12 text-slate-700 text-[9px] tracking-[0.3em] uppercase border-t border-slate-800 pt-8 italic">© 2026 Hayalim Dekor - Premium Furniture Design - Bingöl</div>
-    </footer>
-
-    <a href="https://wa.me/905466309919" class="fixed bottom-6 right-6 bg-green-500 text-white w-16 h-16 rounded-2xl flex items-center justify-center shadow-2xl z-[100] hover:scale-110 transition animate-bounce"><i class="fab fa-whatsapp text-4xl"></i></a>
-
-    <script>
+        // Aç/Kapat
         function openModal(id) { document.getElementById(id).style.display = "block"; document.body.style.overflow = "hidden"; }
         function closeModal(id) { document.getElementById(id).style.display = "none"; document.body.style.overflow = "auto"; }
         window.onclick = function(event) { if (event.target.classList.contains('modal')) { closeModal(event.target.id); } }
-
-        categories.forEach(cat => {
-            let photoGrid = '';
-            for(let i=1; i<=9; i++) { photoGrid += `<img src="${cat.id}-${i}.webp" class="w-full h-72 object-cover rounded-3xl shadow-lg border-2 border-white">`; }
-            document.write(`
-                <div id="modal-${cat.id}" class="modal" onclick="closeModal('modal-${cat.id}')">
-                    <div class="modal-content" onclick="event.stopPropagation()">
-                        <div class="flex justify-between items-center mb-8 border-b border-white/10 pb-6 text-white text-center"><h2 class="serif text-3xl font-bold uppercase">${cat.name}</h2><button onclick="closeModal('modal-${cat.id}')" class="text-5xl hover:text-gold transition">×</button></div>
-                        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">${photoGrid}</div>
-                    </div>
-                </div>
-            `);
-        });
     </script>
-
-    <div id="modal-videolar" class="modal" onclick="closeModal('modal-videolar')">
-        <div class="modal-content" onclick="event.stopPropagation()">
-            <div class="flex justify-between items-center mb-8 border-b border-white/10 pb-6 text-white text-center"><h2 class="serif text-3xl font-bold gold-accent uppercase tracking-widest text-lg">Üretim Videoları</h2><button onclick="closeModal('modal-videolar')" class="text-5xl hover:text-gold transition">×</button></div>
-            <div class="grid grid-cols-2 md:grid-cols-3 gap-6">
-                <script>
-                    for(let i=1; i<=9; i++) {
-                        document.write(`
-                            <div class="space-y-2 text-center">
-                                <video class="vertical-video shadow-2xl" controls playsinline><source src="video-${i}.mp4" type="video/mp4"></video>
-                            </div>
-                        `);
-                    }
-                </script>
-            </div>
-        </div>
-    </div>
 </body>
 </html>
